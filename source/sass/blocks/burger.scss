@@ -1,0 +1,41 @@
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  height: 31px;
+  width: 30px;
+  background-color: transparent;
+  border: none;
+}
+
+.burger__line {
+  position: relative;
+  display: block;
+  height: 1px;
+  width: 100%;
+  margin-bottom: 4px;
+  background-color: $white;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.burger--close {
+  padding: 7px;
+}
+
+.burger--close .burger__line:nth-child(1) {
+  top: 5px;
+  transform: rotate(45deg);
+}
+
+.burger--close .burger__line:nth-child(3) {
+  top: -5px;
+  transform: rotate(-45deg);
+}
+
+.burger--close .burger__line:nth-child(2) {
+  opacity: 0;
+};

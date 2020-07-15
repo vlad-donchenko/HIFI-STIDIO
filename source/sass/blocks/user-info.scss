@@ -1,0 +1,22 @@
+.user-info {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 69px;
+}
+
+.user-info__item--search {
+  display: none;
+}
+
+.user-info__item {
+  margin-right: 38px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.user-info__link {
+  display: block;
+  padding: 7px 0 4px 0;
+}
