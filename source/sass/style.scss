@@ -1,2 +1,15 @@
+@import "global/fonts";
+@import "global/variables";
 @import "global/normalize";
+@import "global/global";
+
+@import "blocks/visually-hidden";
+@import "blocks/list-reset";
 @import "blocks/container";
+@import "blocks/site-header";
+@import "blocks/nav";
+@import "blocks/logo";
+@import "blocks/burger";
+@import "blocks/user-info";
+@import "blocks/main-menu";
+@import "blocks/menu-search";
