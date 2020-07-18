@@ -1,6 +1,7 @@
 .site-header {
   position: relative;
   background-color: $dark-blue;
+  z-index: 1;
 }
 
 @media(min-width: 1199px) {

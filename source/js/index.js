@@ -1,5 +1,3 @@
-import Swiper from "swiper";
-
 const BreakPoint = {
   MOBILE_SMALL: 576,
   MOBILE: 767,
@@ -132,8 +130,10 @@ window.addEventListener(`resize`, () => {
   getMenuBehaviorByBreakpoint(currentDocumentWidth, currentDocumentHeight);
 });
 
-const promoSliderElement = document.querySelector(`#promo_slider`);
-
-if (promoSliderElement) {
-  var swiper = new Swiper(`.swiper-container`);
-}
+$('#promo_slider').slick({
+  infinite: true,
+  arrows: false,
+  dots: true,
+  slidesToShow: 1,
+  slidesToScroll: 1
+});
