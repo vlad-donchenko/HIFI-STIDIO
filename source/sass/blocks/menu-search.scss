@@ -1,4 +1,4 @@
-.menu-search {
+.menu-search form {
   position: relative;
 }
 
@@ -14,9 +14,13 @@
   background-color: transparent;
   border: none;
   border-bottom: 1px solid $dark-blue;
-}
+  border-radius: 0;
+  appearance: none;
 
-.menu-search__input {
+  &:focus {
+    outline: none;
+  }
+
   &::placeholder {
     color: rgba($dark-blue, 0.5);
   }
@@ -31,4 +35,12 @@
   width: 40px;
   border: none;
   background-color: transparent;
+}
+
+@media(min-width: 1199px) {
+  .menu-search {
+    padding-top: 22px;
+    padding-bottom: 30px;
+    background-color: $gray;
+  }
 }

@@ -1,3 +1,10 @@
 .site-header {
+  position: relative;
   background-color: $dark-blue;
+}
+
+@media(min-width: 1199px) {
+  .site-header {
+    position: relative;
+  }
 }

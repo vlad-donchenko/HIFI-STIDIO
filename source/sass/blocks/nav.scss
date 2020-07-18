@@ -55,7 +55,7 @@
   flex-direction: column;
   padding-top: 18px;
   margin-top: 14px;
-  height: calc(100vh - 59px);
+  height: calc(var(--document-height) - 59px);
 }
 
 .nav--open .nav__menu__list {
@@ -72,5 +72,127 @@
 @media(min-width: 400px) {
   .nav__burger {
     margin-left: auto;
+  }
+}
+
+@media(min-width: 768px) {
+  .nav--open {
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+
+  .nav--open .nav__menu {
+    padding-top: 0;
+  }
+
+  .nav__menu {
+    margin-left: -39px;
+    margin-right: -39px;
+    margin-bottom: 0;
+    overflow-y: auto;
+    background-color: $white;
+  }
+
+  .nav__menu__list {
+    margin-top: 0;
+    overflow-y: initial;
+  }
+
+  .nav__search {
+    display: none;
+  }
+
+  .nav--open .nav__menu__list {
+    display: grid;
+    grid-gap: 30px;
+    justify-content: center;
+    align-content: flex-start;
+    grid-template-columns: repeat(4, 90px);
+  }
+
+  .nav__burger {
+    margin-left: 32.7%;
+  }
+
+  .nav--open .nav__menu__list {
+    flex-grow: initial;
+  }
+
+  .nav--open-search .nav__search {
+    display: block;
+  }
+}
+
+@media(min-width: 768px) and (max-width: 1198px) {
+  .nav--open-search {
+    padding-bottom: 0;
+  }
+
+  .nav--open-search .nav__menu {
+    margin-top: 14px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    display: block;
+    background-color: $gray;
+  }
+
+  .nav__search {
+    max-width: 475px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 800px) {
+  .nav__burger {
+    margin-left: auto;
+  }
+}
+
+@media(min-width: 1199px) {
+  .nav {
+    align-items: center;
+  }
+
+  .nav .nav__burger {
+    display: none;
+  }
+
+  .nav__menu, {
+    width: auto;
+    order: -1;
+    margin: 0 0 0 100px;
+    padding-left: 0;
+    padding-right: 0;
+    display: block;
+    background-color: transparent;
+    overflow-y: initial;
+  }
+
+  .nav__logo {
+    order: -2;
+  }
+
+  .nav__menu__list {
+    display: flex;
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav__search {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    max-width: 100%;
+    box-shadow: 0 0 9px rgba($black, 0.19);
+  }
+
+  .nav__search form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 655px;
   }
 }

@@ -20,3 +20,23 @@
   display: block;
   padding: 7px 0 4px 0;
 }
+
+@media(min-width: 768px) {
+  .user-info {
+    max-width: 130px;
+  }
+
+  .user-info__item--search {
+    display: block;
+  }
+}
+
+@media(min-width: 1199px) {
+  .user-info {
+    max-width: 250px;
+  }
+
+  .user-info__item {
+    margin-right: 100px;
+  }
+}

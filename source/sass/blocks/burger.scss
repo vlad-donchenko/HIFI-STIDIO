@@ -7,9 +7,11 @@
   width: 30px;
   background-color: transparent;
   border: none;
+  appearance: none;
 }
 
 .burger__line {
+  z-index: 1;
   position: relative;
   display: block;
   height: 1px;
