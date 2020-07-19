@@ -1,4 +1,5 @@
 .categories {
+  padding-bottom: 58px;
   overflow: hidden;
 }
 
@@ -6,7 +7,13 @@
   margin-top: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
+  grid-gap: 15px;
+}
+
+@media (min-width: 360px) {
+  .categories__list {
+    grid-gap: 30px;
+  }
 }
 
 @media(min-width: 375px) {
@@ -37,6 +44,10 @@
 }
 
 @media (min-width: 1199px) {
+  .categories {
+    padding-bottom: 129px;
+  }
+
   .categories__list {
     grid-gap: 30px;
     grid-template-columns: repeat(6, 160px);

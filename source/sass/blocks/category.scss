@@ -16,9 +16,12 @@
     background-color: rgba($dark-blue, 0.7);
     box-shadow: 0 0 9px rgba($black, 0.19);
     border-radius: 35px;
-
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
+}
+
+.category__img {
+  display: block;
 }
 
 .category__title {
@@ -30,15 +33,20 @@
   letter-spacing: 0.03em;
 }
 
-.category__img {
-  display: block;
-}
-
 .category__img-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 95px;
+}
+
+@media (min-width: 360px) {
+  .category__link {
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+    }
+  }
 }
 
 @media(min-width: 768px) {

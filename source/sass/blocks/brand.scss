@@ -1,0 +1,48 @@
+.brand {
+  flex-grow: 1;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 158px;
+  background-color: $gray;
+  border-radius: 35px;
+
+  @include transition(all);
+
+  &:hover,
+  &:focus {
+    background-color: rgba($dark-blue, 0.7);
+    transform: scale(1.1);
+    box-shadow: 0 0 9px rgba($black, 0.19);
+  }
+}
+
+.brand__img path {
+  @include transition(fill);
+}
+
+.brand:hover .brand__img path,
+.brand:focus .brand__img path{
+  fill: $gray;
+}
+
+@media(min-width: 360px) {
+  .brand {
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+    }
+  }
+}
+
+@media(min-width: 768px) {
+  .brand {
+    min-height: 180px;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.14);
+    }
+  }
+}
