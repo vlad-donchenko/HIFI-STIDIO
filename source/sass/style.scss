@@ -8,8 +8,10 @@
 
 @import "blocks/slick-dots";
 
-@import "blocks/wrapper";
 @import "blocks/visually-hidden";
+
+@import "blocks/wrapper";
+@import "blocks/h2";
 @import "blocks/list-reset";
 @import "blocks/container";
 @import "blocks/site-header";
@@ -22,3 +24,5 @@
 @import "blocks/user-option";
 @import "blocks/social";
 @import "blocks/promo";
+@import "blocks/categories";
+@import "blocks/category";

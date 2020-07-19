@@ -1,10 +1,16 @@
+.promo {
+  margin-bottom: 39px;
+}
+
 .promo__inner {
   position: relative;
+  z-index: 1;
 }
 
 .promo__slider {
   margin-left: -15px;
   margin-right: -15px;
+  z-index: -1;
 }
 
 .promo__slider-item {
@@ -39,6 +45,10 @@
 }
 
 @media(min-width: 768px) {
+  .promo {
+    margin-bottom: 60px;
+  }
+
   .promo__slider {
     margin-left: -39px;
     margin-right: -39px;
@@ -51,6 +61,7 @@
 
 @media(min-width: 1199px) {
   .promo {
+    margin-bottom: 84px;
     padding: 84px 0 44px 0;
     background-color: $beige-color;
   }
