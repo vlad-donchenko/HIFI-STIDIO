@@ -15,3 +15,15 @@
   display: block;
   line-height: 0;
 }
+
+.social--footer {
+  margin-top: 39px;
+}
+
+.social--footer .social__item {
+  margin-right: 22px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
