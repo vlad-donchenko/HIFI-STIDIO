@@ -1,0 +1,31 @@
+.trending-items__tabs {
+  margin-top: 40px;
+}
+
+.trending-items__list {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 255px;
+  justify-content: center;
+}
+
+@media (min-width: 600px) {
+  .trending-items__list {
+    grid-template-columns: repeat(2, 255px);
+  }
+}
+
+@media (min-width: 768px) {
+  .trending-items__list {
+    grid-column-gap: 90px;
+    grid-row-gap: 30px;
+  }
+}
+
+@media (min-width: 1199px) {
+  .trending-items__list {
+    grid-column-gap: 30px;
+    grid-row-gap: 40px;
+    grid-template-columns: repeat(4, 255px);
+  }
+}

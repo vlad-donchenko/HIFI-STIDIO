@@ -1,0 +1,125 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  max-width: 255px;
+  width: 100%;
+}
+
+.product__img-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 255px;
+  border-radius: 35px;
+}
+
+.product__img {
+  display: block;
+  max-height: 255px;
+}
+
+.product__title {
+  min-height: 34px;
+  flex-grow: 1;
+  margin-bottom: 15px;
+  margin-top: 0;
+  font-weight: 500;
+  color: $black;
+  font-size: 14px;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+}
+
+.product__link {
+  font-size: inherit;
+  color: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  letter-spacing: inherit;
+}
+
+.product__info-block {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.product__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product__price {
+  margin: 0;
+  font-weight: 700;
+  color: $brown;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+
+.product__buy {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border: none;
+  line-height: 1.2;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  background-color: transparent;
+}
+
+.product__buy-icon {
+  margin-right: 10px;
+}
+
+.product__actions {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($dark-blue, 0.9);
+  border-radius: 35px;
+  z-index: 1;
+
+  @include transition(all);
+}
+
+.product__actions-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 39px;
+  height: 39px;
+  background-color: $gray;
+  border-radius: 12px;
+}
+
+.product__actions__list {
+  display: grid;
+  grid-gap: 13px;
+  justify-content: center;
+  grid-template-columns: repeat(3, 39px);
+  z-index: 1;
+}
+
+.product:hover .product__actions {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.product:focus-within .product__actions {
+  opacity: 1;
+  pointer-events: initial;
+}
