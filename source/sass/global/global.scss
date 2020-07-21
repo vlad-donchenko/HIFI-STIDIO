@@ -31,6 +31,10 @@ body {
   letter-spacing: 0.05em;
 }
 
+main {
+  flex: 1 0 auto;
+}
+
 img {
   width: auto;
   max-width: 100%;
