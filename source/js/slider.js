@@ -26,8 +26,20 @@
         breakpoint: 599,
         settings: {
           infinite: true,
-          centerPadding: '39px',
-          slidesToShow: 2,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          centerMode: false,
+          focusOnSelect: false,
+        }
+      },
+      {
+        breakpoint: 1198,
+        settings: {
+          infinite: true,
+          centerMode: false,
+          focusOnSelect: false,
+          slidesToShow: 4,
+          slidesToScroll: 1
         }
       }
     ]

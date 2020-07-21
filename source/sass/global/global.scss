@@ -20,6 +20,8 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   min-width: 320px;
   font-family: $base-font-family;
@@ -51,6 +53,10 @@ button {
 
 @media (min-width: 768px) {
   .overflow-hidden {
+    overflow: initial;
+  }
+
+  .overflow-hidden body {
     position: relative;
   }
 }
