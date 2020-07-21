@@ -15,6 +15,9 @@
   &::after {
     content: "+";
   }
+  &:focus {
+    outline: none;
+  }
 }
 
 .menu-footer__list {
@@ -45,6 +48,13 @@
   letter-spacing: 0.05em;
   color: $brown;
   text-decoration: none;
+
+  @include transition(opacity);
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 }
 
 .menu-footer__item {
@@ -67,6 +77,14 @@
     justify-content: center;
   }
 
+  .menu-footer__column {
+    margin-bottom: 0;
+  }
+
+  .menu-footer__list {
+    display: block;
+  }
+
   .menu-footer__toggle {
     display: none;
   }
@@ -75,5 +93,39 @@
 @media (min-width: 475px) {
   .menu-footer {
     grid-template-columns: 180px 180px;
+  }
+}
+
+@media(min-width: 768px) {
+  .menu-footer {
+    grid-column-gap: 60px;
+    grid-row-gap: 30px;
+    justify-content: flex-start;
+  }
+
+  .menu-footer__title {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 850px) {
+  .menu-footer {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+  }
+
+  .menu-footer__column--buy {
+    order: -2;
+  }
+
+  .menu-footer__column--sell {
+    order: -1;
+  }
+}
+
+@media (min-width: 1199px) {
+  .menu-footer {
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 124px;
   }
 }

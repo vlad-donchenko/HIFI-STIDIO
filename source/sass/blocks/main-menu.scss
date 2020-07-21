@@ -130,10 +130,11 @@
 
   .main-menu__submenu {
     position: absolute;
-    margin: 55px 0 55px 0;
+    padding: 55px 0 55px 0;
     left: 0;
     top: 100%;
     width: 100vw;
+    max-width: 100%;
     justify-content: center;
     grid-template-columns: repeat(3, 135px);
     grid-row-gap: 30px;
@@ -163,6 +164,14 @@
       background-color: $gray;
       box-shadow: 0 0 9px rgba($black, 0.19);
     }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1998px) {
+  .main-menu__submenu {
+    margin-top: 0;
+    background-color: $white;
+    box-shadow: 1px 6px 9px rgba($black, 0.19);
   }
 }
 

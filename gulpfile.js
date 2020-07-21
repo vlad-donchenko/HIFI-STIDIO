@@ -101,7 +101,11 @@ gulp.task("js-min", function () {
   return gulp.src([
     "source/libs/jquery/jquery-3.3.1.min.js",
     "source/libs/slick/slick.min.js",
-    "source/js/index.js"
+    "source/js/slider.js",
+    "source/js/header.js",
+    "source/js/site-footer.js",
+    "source/js/tab.js"
+    //"source/js/index.js"
   ])
     .pipe(concat("scripts.min.js"))
     //.pipe(jsmin())

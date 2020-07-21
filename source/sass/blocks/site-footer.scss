@@ -88,6 +88,7 @@
   }
 
   .site-footer__payment {
+    margin-left: 27px;
     max-width: 145px;
     flex-basis: 145px;
     margin-bottom: 0;
@@ -100,5 +101,51 @@
 
   .site-footer__copyright {
     margin-left: 0;
+  }
+
+  .site-footer {
+    margin-top: 106px;
+  }
+}
+
+@media (min-width: 850px) {
+  .site-footer__menu {
+    width: 100%;
+    flex-basis: calc(100% - 97px);
+    max-width: calc(100% - 97px);
+  }
+
+  .site-footer__info {
+    flex-basis: 97px;
+    max-width: 97px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1199px) {
+  .site-footer {
+    margin-top: 107px;
+  }
+
+  .site-footer__menu {
+    max-width: 888px;
+    flex-basis: 888px;
+  }
+
+  .site-footer__inner {
+    padding-bottom: 79px;
+  }
+
+  .site-footer__copyright {
+    max-width: 240px;
+    flex-basis: 240px;
+    text-align: right;
+    font-size: 12px;
+  }
+
+  .site-footer__payment {
+    max-width: 190px;
+    flex-basis: 190px;
+    margin-left: 169px;
   }
 }

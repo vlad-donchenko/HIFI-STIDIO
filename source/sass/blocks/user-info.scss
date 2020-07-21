@@ -39,4 +39,9 @@
   .user-info__item {
     margin-right: 100px;
   }
+
+  .user-info__link:hover svg,
+  .user-info__link:focus svg {
+    opacity: 0.6;
+  }
 }

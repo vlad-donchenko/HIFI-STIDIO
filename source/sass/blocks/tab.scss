@@ -4,6 +4,14 @@
   flex-wrap: wrap;
 }
 
+.tab__content-item {
+  display: none;
+}
+
+.tab__content-item--open {
+  display: block;
+}
+
 .tab__menu-item {
   position: relative;
   margin-right: 20px;
@@ -35,10 +43,18 @@
   line-height: 1.2;
   font-size: 14px;
   letter-spacing: 0.05em;
+
+  @include transition(all);
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 }
 
 .tab__menu-item--active .tab__menu-link {
   font-weight: 700;
+  opacity: 1;
 }
 
 .tab__menu-item--active {

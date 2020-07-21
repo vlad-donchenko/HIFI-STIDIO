@@ -35,9 +35,13 @@
 }
 
 @media (min-width: 1199px) {
+  .trending-items {
+    margin-bottom: 123px;
+  }
+
   .trending-items__list {
     grid-column-gap: 30px;
-    grid-row-gap: 40px;
+    grid-row-gap: 36px;
     grid-template-columns: repeat(4, 255px);
   }
 }

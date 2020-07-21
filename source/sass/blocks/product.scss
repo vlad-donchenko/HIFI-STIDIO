@@ -37,6 +37,13 @@
   line-height: inherit;
   text-decoration: none;
   letter-spacing: inherit;
+
+  @include transition(opacity);
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 }
 
 .product__info-block {
@@ -71,6 +78,16 @@
   font-weight: 700;
   letter-spacing: 0.05em;
   background-color: transparent;
+
+  @include transition(all);
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  &:focus {
+    transform: translateY(0);
+  }
 }
 
 .product__buy-icon {
@@ -104,6 +121,13 @@
   height: 39px;
   background-color: $gray;
   border-radius: 12px;
+
+  @include transition(all);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
 }
 
 .product__actions__list {

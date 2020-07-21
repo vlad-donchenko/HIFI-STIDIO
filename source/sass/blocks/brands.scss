@@ -43,6 +43,10 @@
 }
 
 @media (min-width: 1199px) {
+  .brands {
+    padding-bottom: 126px;
+  }
+
   .brands__list {
     grid-gap: 30px;
     grid-template-columns: repeat(6, 160px);

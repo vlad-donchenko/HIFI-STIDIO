@@ -2,8 +2,11 @@
   padding: 16px;
   border: none;
   background-color: transparent;
-}
 
-.testimonial__arrows {
-  margin-top: 13px;
+  @include transition(opacity);
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 }

@@ -36,7 +36,7 @@
 .nav--open {
   position: fixed;
   width: 100%;
-  height: 100%;
+  height: var(--document-height);
   left: 0;
   top: 0;
   padding-left: 15px;
@@ -120,16 +120,17 @@
 
   .nav--open-search .nav__search {
     display: block;
+    animation-name: fadeIn;
+    animation-duration: 0.25s;
+    animation-timing-function: ease;
   }
 }
 
 @media(min-width: 768px) and (max-width: 1198px) {
-  .nav--open-search {
-    padding-bottom: 0;
-  }
-
   .nav--open-search .nav__menu {
-    margin-top: 14px;
+    position: absolute;
+    top: 100%;
+    margin-top: 0;
     padding-top: 15px;
     padding-bottom: 30px;
     display: block;
@@ -141,6 +142,19 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .nav--open,
+  .nav--open .nav__menu {
+    height: auto;
+  }
+
+  .nav__menu {
+    overflow-y: initial;
+  }
+
+  .nav__menu__list {
+    margin-bottom: 0;
   }
 }
 

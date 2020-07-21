@@ -39,7 +39,18 @@ button {
   cursor: pointer;
 }
 
-.open-nav {
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-hidden body {
   position: fixed;
   width: 100%;
+  padding-top: 59px;
+}
+
+@media (min-width: 768px) {
+  .overflow-hidden {
+    position: relative;
+  }
 }
