@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  $(`#promo_slider`).slick({
+  $('#promo_slider').slick({
     infinite: true,
     arrows: false,
     dots: true,
@@ -9,7 +9,7 @@
     slidesToScroll: 1
   });
 
-  $(`#testimonial_slider`).slick({
+  $('#testimonial_slider').slick({
     infinite: false,
     dots: false,
     slidesToShow: 1,
@@ -44,4 +44,28 @@
       }
     ]
   });
+
+  $('#categories_slider').slick({
+    infinite: true,
+    dots: false,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    prevArrow: $('#categories_prev'),
+    nextArrow: $('#categories_next'),
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 470,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 1198,
+        settings: 'unslick'
+      }
+    ]
+  });
+
 })();

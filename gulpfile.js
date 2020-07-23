@@ -103,6 +103,7 @@ gulp.task("js-min", function () {
     "source/libs/slick/slick.min.js",
     "source/js/slider.js",
     "source/js/header.js",
+    "source/js/catalog.js",
     "source/js/site-footer.js",
     "source/js/tab.js"
     //"source/js/index.js"
