@@ -15,7 +15,7 @@
   <header class="site-header">
     <div class="container site-header__inner">
       <nav class="nav">
-        <a class="logo nav__logo">
+        <a href="/" class="logo nav__logo">
           <img src="img/logo.svg" width="104" height="31" alt="logo">
         </a>
         <div class="burger nav__burger" title="Open Menu">
@@ -721,6 +721,16 @@
               </strong>
               of 40 results
             </p>
+            <div class="catalog_sort-select">
+              <label for="sort_select" class="visually-hidden">
+                Sorting
+              </label>
+              <select id="sort_select">
+                <option value="default" selected>Default sorting</option>
+                <option value="top">Top price sorting</option>
+                <option value="low">Low price sorting</option>
+              </select>
+            </div>
           </div>
           <div class="catalog__list">
             <article class="product">
@@ -1449,7 +1459,7 @@
         </div>
       </div>
       <div class="site-footer__info">
-        <a class="logo">
+        <a href="/" class="logo">
           <img src="img/logo-footer.svg" width="97" height="101" alt="Logo">
         </a>
         <ul class="social list-reset social--footer">
