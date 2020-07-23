@@ -75,6 +75,13 @@
   font-size: 14px;
   color: $dark-blue;
   letter-spacing: 0.02em;
+
+  @include transition(opacity);
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 }
 
 .filter__item--dropdown {
@@ -137,8 +144,15 @@
   letter-spacing: 0.02em;
   color:$dark-blue;
 
+  @include transition(opacity);
+
   &::before {
     content: "-";
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
   }
 }
 

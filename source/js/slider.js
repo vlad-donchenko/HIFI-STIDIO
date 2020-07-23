@@ -1,7 +1,13 @@
 'use strict';
 
 (function () {
-  $('#promo_slider').slick({
+  const REINITIALIZE_CATEGORIES_SLIDER_BREAKPOINT = 1198;
+
+  const promoSlider = $('#promo_slider');
+  const testimonialSlider = $('#testimonial_slider');
+  const categoriesSlider = $('#categories_slider');
+
+  const getPromoSliderSettings = () => ({
     infinite: true,
     arrows: false,
     dots: true,
@@ -9,13 +15,13 @@
     slidesToScroll: 1
   });
 
-  $('#testimonial_slider').slick({
+  const getTestimonialSliderSettings = () => ({
     infinite: false,
     dots: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
-    focusOnSelect : true,
+    focusOnSelect: true,
     centerPadding: '12%',
     prevArrow: $('#testimonial_prev'),
     nextArrow: $('#testimonial_next'),
@@ -45,7 +51,7 @@
     ]
   });
 
-  $('#categories_slider').slick({
+  const getCategoriesSlider = () => ({
     infinite: true,
     dots: false,
     slidesToShow: 2,
@@ -66,6 +72,17 @@
         settings: 'unslick'
       }
     ]
+  });
+
+  promoSlider.slick(getPromoSliderSettings());
+  testimonialSlider.slick(getTestimonialSliderSettings());
+  categoriesSlider.slick(getCategoriesSlider());
+
+
+  $(window).on('resize', function () {
+    if ($(window).width() < REINITIALIZE_CATEGORIES_SLIDER_BREAKPOINT && !categoriesSlider.hasClass('slick-initialized')) {
+      categoriesSlider.slick(getCategoriesSlider());
+    }
   });
 
 })();
