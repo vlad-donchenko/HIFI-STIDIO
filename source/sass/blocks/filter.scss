@@ -195,6 +195,14 @@
   display: block;
 }
 
+@media (max-width: 1198px) {
+  .filter__categories {
+    max-width: 218px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @media (min-width: 768px) {
   .filter {
     margin-left: -39px;
