@@ -6,6 +6,8 @@
   const promoSlider = $('#promo_slider');
   const testimonialSlider = $('#testimonial_slider');
   const categoriesSlider = $('#categories_slider');
+  const previewSlider = $('#preview_slider');
+  const relatedProductsSlider = $('#related_products_slider');
 
   const getPromoSliderSettings = () => ({
     infinite: true,
@@ -51,7 +53,7 @@
     ]
   });
 
-  const getCategoriesSlider = () => ({
+  const getCategoriesSliderSettings = () => ({
     infinite: true,
     dots: false,
     slidesToShow: 2,
@@ -74,14 +76,53 @@
     ]
   });
 
+  const getPreviewSliderSettings = () => ({
+    infinite: false,
+    arrows: false,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+  });
+
+  const getRelatedProductsSlider = () => ({
+    infinite: false,
+    dots: false,
+    arrows: false,
+    centerMode: true,
+    centerPadding: '90px 0 0',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 430,
+        settings: {
+          centerPadding: '20%',
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 1198,
+        settings: 'unslick'
+      }
+    ]
+  });
+
   promoSlider.slick(getPromoSliderSettings());
   testimonialSlider.slick(getTestimonialSliderSettings());
-  categoriesSlider.slick(getCategoriesSlider());
+  categoriesSlider.slick(getCategoriesSliderSettings());
+  previewSlider.slick(getPreviewSliderSettings());
+  relatedProductsSlider.slick(getRelatedProductsSlider());
 
 
   $(window).on('resize', function () {
     if ($(window).width() < REINITIALIZE_CATEGORIES_SLIDER_BREAKPOINT && !categoriesSlider.hasClass('slick-initialized')) {
-      categoriesSlider.slick(getCategoriesSlider());
+      categoriesSlider.slick(getCategoriesSliderSettings());
+    }
+
+    if (!relatedProductsSlider.hasClass('slick-initialized')) {
+      relatedProductsSlider.slick(getRelatedProductsSlider());
     }
   });
 

@@ -82,11 +82,11 @@
   @include transition(all);
 
   &:hover {
-    transform: translateY(-4px);
+    transform: scale(1.2);
   }
 
   &:focus {
-    transform: translateY(0);
+    transform: scale(1.2);
   }
 }
 

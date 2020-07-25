@@ -26,14 +26,13 @@
   &::before {
     content: " ";
     position: absolute;
-    top: 50%;
+    top: 12px;
     right: 7px;
     display: block;
     width: 6px;
     height: 10px;
     background-image: url("../img/breadcrumb-arrow.svg");
     background-size: 6px 10px;
-    transform: translateY(-50%);
   }
 }
 

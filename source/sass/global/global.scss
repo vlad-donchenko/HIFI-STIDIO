@@ -45,6 +45,15 @@ button {
   cursor: pointer;
 }
 
+input {
+  appearance: none;
+  cursor: pointer;
+}
+
+textarea {
+  cursor: pointer;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
