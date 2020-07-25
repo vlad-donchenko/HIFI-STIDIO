@@ -1,0 +1,48 @@
+.product-counter__amount::-webkit-outer-spin-button,
+.product-counter__amount::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.product-counter__amount[type=number] {
+  -moz-appearance: textfield;
+}
+
+.product-counter__button {
+  height: 40px;
+  width: 18px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 12px;
+}
+
+.product-counter__amount {
+  height: 40px;
+  width: 33px;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+}
+
+.product-counter {
+  display: flex;
+  align-items: center;
+  max-width: 72px;
+  width: 100%;
+  background-color: $gray;
+  border-radius: 12px;
+}
+
+.product-counter__button--subtract {
+  justify-content: flex-end;
+}
+
+.product-counter__button--add {
+  justify-content: flex-start;
+}

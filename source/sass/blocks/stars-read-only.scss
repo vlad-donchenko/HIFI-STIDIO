@@ -1,0 +1,15 @@
+.stars-read-only {
+  display: flex;
+}
+
+.stars-read-only__start {
+  margin-right: 2px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.stars-read-only__start.active {
+  fill: $yellow;
+}

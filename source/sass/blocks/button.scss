@@ -1,0 +1,16 @@
+.button {
+  padding: 15px 13px 14px 13px;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.2;
+  color: $gray;
+  background-color: $dark-blue;
+  border-radius: 9px;
+ border: 1px solid $dark-blue;
+}
+
+.button--fluid {
+  display: block;
+  width: 100%;
+}
