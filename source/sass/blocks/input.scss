@@ -90,3 +90,16 @@
 .input--textarea.input--active .input__label {
   left: 14px;
 }
+
+.input--small .input__label {
+  top: 13px;
+}
+
+.input--small .input__content {
+  height: 39px;
+  border-radius: 9px;
+}
+
+.input--small.input--active .input__label {
+  top: -3px;
+}
