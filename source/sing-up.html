@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HIFI AUDIO</title>
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<div style="display: none">
+  <include src="build/img/sprite.svg"></include>
+</div>
+<div class="wrapper wrapper--authorization">
+  <section class="become-client">
+    <div class="container become-client__inner">
+      <div class="become-client__content">
+        <div class="become-client__site">
+          <div class="become-client__logo">
+            <a href="/" class="become-client__logo-link">
+              <img src="img/logo-white.svg" width="104" height="32" alt="Logo">
+            </a>
+          </div>
+          <p class="become-client__text">
+            Registering to this website, you accept our Terms of Use and our Privacy Policy
+          </p>
+        </div>
+        <div class="become-client__form-wrapper">
+          <h1 class="become-client__title">
+            Sign up
+          </h1>
+          <form action="sing-up.php" method="post">
+            <div class="become-client__form-item">
+              <div class="input input--small">
+                <label for="sing_up_user_name" class="input__label">
+                  Username
+                </label>
+                <input type="text" name="sing_up_user_name" class="input__content" id="sing_up_user_name">
+              </div>
+            </div>
+            <div class="become-client__form-item">
+              <div class="input input--small">
+                <label for="sing_up_user_email" class="input__label">
+                  Email
+                </label>
+                <input type="email" name="sing_up_user_email" class="input__content" id="sing_up_user_email">
+              </div>
+            </div>
+            <div class="become-client__form-item">
+              <div class="input input--small">
+                <label for="sing_up_user_tel" class="input__label">
+                  Phone
+                </label>
+                <input type="tel" name="sing_up_user_tel" class="input__content" id="sing_up_user_tel">
+              </div>
+            </div>
+            <div class="become-client__form-item">
+              <div class="input input--small">
+                <label for="sing_up_user_password" class="input__label">
+                  Password
+                </label>
+                <input type="password" name="sing_up_user_password" class="input__content" id="sing_up_user_password">
+              </div>
+            </div>
+            <div class="become-client__form-item">
+              <div class="input input--small">
+                <label for="sing_up_user_password_confirm" class="input__label">
+                  Confirm password
+                </label>
+                <input type="password" name="sing_up_user_password_confirm" class="input__content" id="sing_up_user_password_confirm">
+              </div>
+            </div>
+            <div class="become-client__form-item">
+              <p class="become-client__description">
+                Your password must be at least 6 characters long and must
+                contain letters, numbers and special characters. Cannot
+                contain whitespace.
+              </p>
+            </div>
+            <div class="become-client__form-item">
+              <div class="checkbox checkbox--brown-text">
+                <input type="checkbox" name="delivery_yes" class="checkbox__input visually-hidden" id="delivery_no">
+                <label for="delivery_no" class="checkbox__label">
+                  do not wish to receive news and promotions from HIFI Audio by email.
+                </label>
+              </div>
+            </div>
+            <div class="become-client__form-item">
+              <button type="submit" class="button button--fluid button--small become-client__submit">
+                Sign in
+              </button>
+            </div>
+          </form>
+          <div class="become-client__actions">
+            <p class="become-client__registration">
+              Already registered?
+              <a href="#">Sign in</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<script src="js/scripts.min.js"></script>
+</body>
+</html>

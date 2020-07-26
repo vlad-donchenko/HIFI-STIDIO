@@ -56,3 +56,12 @@
     border-color: $dark-blue;
   }
 }
+
+
+.checkbox--brown-text .checkbox__label {
+  padding-top: 3px;
+  color: $brown;
+  font-weight: 500;
+  font-size: 8px;
+  line-height: 10px;
+}
