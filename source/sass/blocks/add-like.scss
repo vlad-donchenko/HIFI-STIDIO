@@ -2,4 +2,19 @@
   padding: 0;
   background-color: transparent;
   border: none;
+
+  @include transition(all);
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:focus {
+    transform: scale(1.2);
+    outline: none;
+  }
+}
+
+.add-like--active path {
+  fill: $brown;
 }

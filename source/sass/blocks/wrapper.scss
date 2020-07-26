@@ -11,3 +11,23 @@
 .wrapper--home .site-footer {
   margin-top: 39px;
 }
+
+@media (min-width: 768px) {
+  .wrapper  .site-footer {
+    margin-top: 128px;
+  }
+
+  .wrapper--home .site-footer {
+    margin-top: 106px;
+  }
+}
+
+@media (min-width: 1199px) {
+  .wrapper .site-footer {
+    margin-top: 127px;
+  }
+
+  .wrapper--home .site-footer {
+    margin-top: 106px;
+  }
+}

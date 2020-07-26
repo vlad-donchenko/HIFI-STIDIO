@@ -17,6 +17,16 @@
   background-color: transparent;
   border: none;
   border-radius: 12px;
+
+  @include transition(all);
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
 }
 
 .product-counter__amount {

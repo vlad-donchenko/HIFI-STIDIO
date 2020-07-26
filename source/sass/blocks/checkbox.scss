@@ -41,6 +41,12 @@
   }
 }
 
+.checkbox__input:focus + .checkbox__label {
+  &::before {
+    border-color: $dark-blue;
+  }
+}
+
 .checkbox__input:checked + .checkbox__label {
   &::after {
     opacity: 1;

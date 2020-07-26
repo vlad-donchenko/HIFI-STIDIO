@@ -81,6 +81,20 @@
     arrows: false,
     slidesToShow: 4,
     slidesToScroll: 4,
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 1198,
+        settings: {
+          arrows: true,
+          draggable: false,
+          prevArrow: $('#preview_prev'),
+          nextArrow: $('#preview_next'),
+          infinite: true,
+          vertical: true
+        }
+      }
+    ]
   });
 
   const getRelatedProductsSlider = () => ({
@@ -97,6 +111,24 @@
         breakpoint: 430,
         settings: {
           centerPadding: '20%',
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          centerPadding: '26%',
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          centerPadding: '30%',
           infinite: true,
           slidesToShow: 1,
           slidesToScroll: 1,

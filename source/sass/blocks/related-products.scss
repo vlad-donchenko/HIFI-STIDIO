@@ -12,3 +12,32 @@
   margin: auto;
   max-width: 255px;
 }
+
+@media (min-width: 768px) {
+  .related-products__slider {
+    margin-left: -39px;
+    margin-right: -39px;
+  }
+
+  .related-products__title {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1198px) {
+  .related-products__slider {
+    display: grid;
+    grid-template-columns: repeat(4, 255px);
+    grid-gap: 30px;
+  }
+
+  .related-products__item {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .related-products__slider {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

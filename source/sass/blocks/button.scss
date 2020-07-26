@@ -8,6 +8,19 @@
   background-color: $dark-blue;
   border-radius: 9px;
  border: 1px solid $dark-blue;
+
+  @include transition(all);
+
+  &:hover {
+    background-color: transparent;
+    color: $dark-blue;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: transparent;
+    color: $dark-blue;
+  }
 }
 
 .button--fluid {

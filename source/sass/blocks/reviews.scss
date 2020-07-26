@@ -93,3 +93,35 @@
   margin-left: -15px;
   margin-right: -15px;
 }
+
+@media(min-width: 768px) {
+  .reviews__title {
+    font-size: 14px;
+  }
+
+  .reviews__author {
+    font-size: 14px;
+  }
+
+  .reviews__text p {
+    font-size: 14px;
+  }
+
+  .reviews__privacy-policy br {
+    display: none;
+  }
+
+  .reviews__submit {
+    max-width: 161px;
+  }
+
+  .reviews__text {
+    margin-top: 6px;
+  }
+}
+
+@media (min-width: 1199px) {
+  .reviews {
+    max-width: 540px;
+  }
+}

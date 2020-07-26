@@ -7,6 +7,9 @@
   if (previews && previews.length > 0) {
     previews.forEach((preview) => {
       preview.addEventListener('click', () => {
+        console.log('clickl');
+        console.log(preview.dataset.src);
+        console.log(mainProductImage);
         mainProductImage.src = preview.dataset.src;
       });
     });
