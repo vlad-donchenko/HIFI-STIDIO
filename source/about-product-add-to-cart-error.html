@@ -379,24 +379,47 @@
   </header>
   <main>
     <div class="breadcrumb">
-      <div class="container breadcrumb__inner">
-        <ol class="breadcrumb__list">
-          <li class="breadcrumb__item">
-            <a href="#" class="breadcrumb__link">
-              Home
-            </a>
-          </li>
-          <li class="breadcrumb__item">
-            <a href="#" class="breadcrumb__link">
-              Shop
-            </a>
-          </li>
-          <li class="breadcrumb__item breadcrumb__item--active">
-            <a class="breadcrumb__link">
-              Aurender N10 Network Streamer
-            </a>
-          </li>
-        </ol>
+      <div class="breadcrumb__background">
+        <div class="container breadcrumb__inner">
+          <ol class="breadcrumb__list">
+            <li class="breadcrumb__item">
+              <a href="#" class="breadcrumb__link">
+                Home
+              </a>
+            </li>
+            <li class="breadcrumb__item">
+              <a href="#" class="breadcrumb__link">
+                Shop
+              </a>
+            </li>
+            <li class="breadcrumb__item breadcrumb__item--active">
+              <a class="breadcrumb__link">
+                Aurender N10 Network Streamer
+              </a>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div class="alert alert--error">
+        <div class="container alert__inner">
+          <p class="alert__text">
+            We don't have enough "Aurender N10 Network Streamer" stock on hand for the quantity you selected.
+            Please try again.
+            <strong>
+              View Cart
+            </strong>
+            or
+            <strong>
+              Checkout.
+            </strong>
+          </p>
+          <button type="button" class="alert__close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23" viewBox="0 0 24 23" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4167 5.87798C17.7539 6.21524 17.7539 6.76205 17.4167 7.09932L7.39501 17.121C7.05775 17.4582 6.51094 17.4582 6.17368 17.121C5.83641 16.7837 5.83641 16.2369 6.17368 15.8996L16.1953 5.87798C16.5326 5.54071 17.0794 5.54071 17.4167 5.87798Z" fill="#EDEDED"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4173 17.1211C17.08 17.4584 16.5332 17.4584 16.196 17.1211L6.17431 7.09948C5.83705 6.76222 5.83705 6.21541 6.17431 5.87814C6.51158 5.54088 7.05839 5.54088 7.39565 5.87814L17.4173 15.8998C17.7546 16.2371 17.7546 16.7839 17.4173 17.1211Z" fill="#EDEDED"/>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
     <section class="about-product">
@@ -476,7 +499,7 @@
                 999.95
               </p>
             </div>
-            <button type="button" class="add-like about-product__add-like" aria-label="add to like">
+            <button type="button" class="add-like add-like--active about-product__add-like" aria-label="add to like">
               <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
                 <path
                   d="M11.9996 1.90137C11.2996 1.20137 10.4996 0.901367 9.49961 0.901367C8.49961 0.901367 7.69961 1.30137 6.99961 1.90137L6.79961 2.10137L6.59961 1.90137C5.89961 1.30137 5.09961 0.901367 4.09961 0.901367C3.19961 0.901367 2.29961 1.30137 1.59961 1.90137C0.999609 2.60137 0.599609 3.50137 0.599609 4.40137C0.599609 5.40137 0.999609 6.20137 1.59961 6.90137L6.39961 11.7014C6.49961 11.8014 6.59961 11.9014 6.79961 11.9014C6.89961 11.9014 7.09961 11.8014 7.19961 11.7014L11.9996 6.90137C12.6996 6.20137 12.9996 5.30137 12.9996 4.40137C12.9996 3.50137 12.5996 2.60137 11.9996 1.90137ZM11.1996 6.10137L6.79961 10.5014L2.39961 6.10137C1.89961 5.70137 1.69961 5.10137 1.69961 4.40137C1.69961 3.70137 1.99961 3.10137 2.39961 2.70137C2.89961 2.20137 3.49961 2.00137 4.09961 2.00137C4.79961 2.00137 5.39961 2.30137 5.79961 2.70137L6.39961 3.30137C6.49961 3.40137 6.59961 3.50137 6.79961 3.50137C6.89961 3.50137 7.09961 3.40137 7.19961 3.30137L7.79961 2.70137C8.29961 2.20137 8.89961 2.00137 9.49961 2.00137C10.0996 2.00137 10.7996 2.30137 11.1996 2.70137C11.6996 3.20137 11.8996 3.80137 11.8996 4.40137C11.8996 5.10137 11.6996 5.70137 11.1996 6.10137Z"
@@ -583,7 +606,7 @@
                   </div>
                 </div>
                 <div class="about-product__add-cart">
-                  <div class="product-counter">
+                  <div class="product-counter product-counter--error">
                     <button type="button" class="product-counter__button product-counter__button--subtract">
                       <svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" viewBox="0 0 10 2" fill="none">
                         <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd"
@@ -594,7 +617,7 @@
                     <label for="product_amount" class="visually-hidden">
                       Amount
                     </label>
-                    <input type="number" name="product_amount" class="product-counter__amount" value="1"
+                    <input type="number" name="product_amount" class="product-counter__amount" value="221"
                            id="product_amount">
                     <button type="button" class="product-counter__button product-counter__button--add">
                       <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
@@ -621,7 +644,10 @@
             </div>
           </div>
           <div class="about-product__item about-product__item--characteristic">
-            <div class="about-product__characteristic-list">
+            <div class="about-product__characteristic-list about-product__characteristic-list--brand-image">
+              <div class="about-product__characteristic about-product__characteristic--brand">
+                <img src="img/about-product/brand.jpg" width="72" height="67" alt="Brand">
+              </div>
               <div class="about-product__characteristic">
                 <p class="about-product__characteristic--label">
                   <strong>

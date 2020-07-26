@@ -6,13 +6,26 @@
   <title>HIFI AUDIO</title>
   <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
+  <style>
+    .vd-list {
+      font-size: 18px;
+    }
+
+    .vd-list li {
+      margin-bottom: 15px;
+    }
+
+    .vd-list li:last-child {
+      margin-bottom: 0;
+    }
+  </style>
 </head>
 <body>
 <div style="display: none">
   <include src="build/img/sprite.svg"></include>
 </div>
 <div class="wrapper wrapper--home">
-  <ul>
+  <ul class="vd-list">
     <li>
       <a href="home-page.html">
         Home page
@@ -26,6 +39,16 @@
     <li>
       <a href="about-product.html">
         About product page
+      </a>
+    </li>
+    <li>
+      <a href="about-product-add-to-cart.html">
+        About product page (Add to cart)
+      </a>
+    </li>
+    <li>
+      <a href="about-product-add-to-cart-error.html">
+        About product page (Add to cart) error
       </a>
     </li>
   </ul>

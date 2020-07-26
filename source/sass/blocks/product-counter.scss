@@ -56,3 +56,7 @@
 .product-counter__button--add {
   justify-content: flex-start;
 }
+
+.product-counter--error {
+  border: 1px solid $red;
+}

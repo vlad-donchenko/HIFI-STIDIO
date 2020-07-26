@@ -286,6 +286,12 @@
   display: none;
 }
 
+.about-product__characteristic--brand {
+  max-width: 100%;
+  width: 100%;
+  padding-bottom: 8px;
+}
+
 @media (min-width: 600px) {
   .about-product__item--choice {
     display: flex;
@@ -308,6 +314,11 @@
 @media (min-width: 768px) {
   .about-product__view {
     max-width: 690px;
+  }
+
+  .about-product__characteristic--brand {
+    max-width: 71px;
+    padding: 14px 19px;
   }
 
   .about-product__img-wrap {
@@ -367,6 +378,10 @@
 
   .about-product__description p {
     font-size: 14px;
+  }
+
+  .about-product__characteristic-list--brand-image {
+    align-items: center;
   }
 }
 
@@ -486,5 +501,9 @@
   .about-product__preview-list {
     margin-top: -15px;
     margin-bottom: -15px;
+  }
+
+  .about-product__characteristic--brand {
+    margin-bottom: 14px;
   }
 }
