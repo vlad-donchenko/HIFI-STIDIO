@@ -51,6 +51,13 @@
   background-image: url("../img/arrow-down.svg");
   background-size: contain;
   background-repeat: no-repeat;
+
+  @include transition(all);
+}
+
+.catalog_sort-select .select2-container--open .select2-selection__arrow::after {
+  top: 6px;
+  transform: rotate(180deg);
 }
 
 .catalog_sort-select .select2-selection {
