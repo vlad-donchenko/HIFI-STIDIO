@@ -59,6 +59,10 @@
   }
 }
 
+.account__content--favorites {
+  padding-top: 18px;
+}
+
 @media (max-width: 1198px) {
   .account__menu-list {
     display: flex;
@@ -109,6 +113,12 @@
   }
 }
 
+@media (min-width: 768px) {
+  .account__content--favorites {
+    padding-top: 3px;
+  }
+}
+
 @media(min-width: 768px) and (max-width: 1198px) {
   .account__menu-item {
     padding-left: 17px;
@@ -136,6 +146,10 @@
 @media (min-width: 1199px) {
   .account {
     margin-top: 127px;
+  }
+
+  .account__content--favorites {
+    padding-top: 0;
   }
 
   .account__inner {
