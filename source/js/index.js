@@ -7,9 +7,6 @@
   if (previews && previews.length > 0) {
     previews.forEach((preview) => {
       preview.addEventListener('click', () => {
-        console.log('clickl');
-        console.log(preview.dataset.src);
-        console.log(mainProductImage);
         mainProductImage.src = preview.dataset.src;
       });
     });
@@ -82,6 +79,27 @@
 
       inputItem.classList.remove('input--active');
     });
-  })
+  });
+
+  const orderTable = document.querySelector('.order__table');
+
+  if (orderTable) {
+    const orderTableItems = [...orderTable.querySelectorAll('.order__table-item')];
+
+    orderTableItems.forEach((orderItem) => {
+      const orderCloseButton = orderItem.querySelector('.order__column-button--close');
+      const orderOpenButton = orderItem.querySelector('.order__column-button--open');
+
+      if (orderCloseButton && orderOpenButton) {
+        orderCloseButton.addEventListener('click', () => {
+          orderItem.classList.remove('order__table-item--open');
+        });
+
+        orderOpenButton.addEventListener('click', () => {
+          orderItem.classList.add('order__table-item--open');
+        });
+      }
+    });
+  }
 
 })();

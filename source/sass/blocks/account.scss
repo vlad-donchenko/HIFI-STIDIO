@@ -8,6 +8,10 @@
   border-radius: 11px;
 }
 
+.account__content {
+  border-top: 1px solid transparent;
+}
+
 .account__menu-item--logout {
   display: none;
 }
@@ -154,6 +158,7 @@
 
   .account__inner {
     display: grid;
+    align-items: flex-start;
     grid-template-columns: 255px 635px;
     grid-gap: 30px;
     max-width: 920px;
