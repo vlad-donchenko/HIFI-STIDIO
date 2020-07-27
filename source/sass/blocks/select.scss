@@ -54,13 +54,6 @@
   }
 }
 
-.select--gray .select2-selection {
-  &:focus {
-    border: 1px solid $dark-blue;
-    outline: none;
-  }
-}
-
 .select--gray .select2-container--open .select2-selection {
   border-color: $gray;
 }
