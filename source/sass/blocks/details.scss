@@ -1,0 +1,49 @@
+.details {
+  padding-top: 17px;
+}
+
+.details__form-section {
+  margin-bottom: 38px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 14px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.details__from-list {
+  margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .details {
+    padding-top: 3px;
+  }
+
+  .details__from-wrap {
+    max-width: 690px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .details__form-save {
+    max-width: 190px;
+  }
+}
+
+@media (min-width: 1199px) {
+  .details__from-wrap {
+    max-width: 350px;
+    margin: 0;
+  }
+
+  .details {
+    padding-top: 44px;
+  }
+
+  .details__from-list {
+    margin-bottom: 30px;
+  }
+}
