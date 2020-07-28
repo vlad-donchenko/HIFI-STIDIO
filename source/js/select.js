@@ -2,6 +2,7 @@
 
 (function () {
   const sortSelect = $('#sort_select');
+  const selectCountry = $('#shipping_country');
   const selectGrayAppearance = $('.select--gray select');
 
 
@@ -16,6 +17,14 @@
     placeholder: 'Choose An Option'
   });
 
+  const getSelectCountrySetting = () => ({
+    ...getSelectSetting(),
+    width: '100%',
+    dropdownCssClass: 'select2-dropdown--transparent',
+    placeholder: 'Country*'
+  });
+
   sortSelect.select2(getSelectSetting());
   selectGrayAppearance.select2(getProductSelectSetting());
+  selectCountry.select2(getSelectCountrySetting())
 })();
