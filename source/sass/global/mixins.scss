@@ -3,3 +3,9 @@
   transition-duration: $animation-duration;
   transition-timing-function: $animation-timing-function;
 }
+
+@mixin animation($property) {
+  animation-name: $property;
+  animation-duration: $animation-duration;
+  animation-timing-function: $animation-timing-function;
+}

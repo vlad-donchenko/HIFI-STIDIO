@@ -24,6 +24,7 @@
     /*-- Menu --*/
     const  nav = siteHeader.querySelector('nav');
     const menuButton = siteHeader.querySelector('.burger');
+    const headerHeight = nav.offsetHeight;
 
     const closeMenu = () => {
       if (menuButton.classList.contains(ActiveClass.BURGER_CLOSE) && nav.classList.contains(ActiveClass.NAV_OPEN)) {
@@ -40,6 +41,16 @@
     };
 
     menuButton.addEventListener('click', toggleShowMenuClickHandler);
+
+    window.addEventListener('scroll', (evt) => {
+      if (window.scrollY > headerHeight) {
+        siteHeader.classList.add('site-header--fixed');
+        root.style = `padding-top: ${headerHeight}px`;
+      } else {
+        siteHeader.classList.remove('site-header--fixed');
+        root.style = '0';
+      }
+    });
 
     /*-- User Option List --*/
 
@@ -214,5 +225,9 @@
       currentDocumentHeight = document.body.offsetHeight;
       getMenuBehaviorByBreakpoint(currentDocumentWidth, currentDocumentHeight);
     });
+
+    window.header = {
+      root
+    }
   }
 })();

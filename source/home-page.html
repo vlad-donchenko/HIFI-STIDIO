@@ -727,7 +727,7 @@
               </svg>
             </a>
           </div>
-          <div class="brands__item">
+          <div class="brands__item brands__item--search">
             <a href="#" class="brand" aria-label="brand">
               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none" class="brand__img">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9609 0.608398C6.08731 0.608398 0.503906 6.19838 0.503906 13.0654C0.503906 19.9327 6.09368 25.5224 12.9609 25.5224C15.8743 25.5224 18.5572 24.518 20.6813 22.8371L27.0238 29.1796C27.3001 29.4559 27.6739 29.6084 28.0494 29.6084C28.4126 29.6084 28.7928 29.4704 29.0792 29.1754C29.6386 28.6114 29.6372 27.6905 29.0751 27.1283L22.7326 20.7858C24.4135 18.6617 25.4179 15.9788 25.4179 13.0654C25.4179 6.19181 19.828 0.608398 12.9609 0.608398ZM3.40667 13.0654C3.40667 7.79809 7.69311 3.51732 12.9548 3.51732C18.2221 3.51732 22.5029 7.80376 22.5029 13.0654C22.5029 18.3276 18.2216 22.6197 12.9548 22.6197C7.6936 22.6197 3.40667 18.3332 3.40667 13.0654Z" fill="#252A37"/>
@@ -2012,6 +2012,279 @@
       </div>
     </div>
   </footer>
+  <section class="search-brand">
+    <div class="container search-brand__inner">
+      <h2 class="visually-hidden">
+        Search by brand
+      </h2>
+      <button type="button" class="search-brand__close" aria-label="Close search by brand">
+        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M17.1218 5.6212C17.459 5.95847 17.459 6.50528 17.1218 6.84254L7.10009 16.8642C6.76283 17.2015 6.21602 17.2015 5.87875 16.8642C5.54149 16.5269 5.54149 15.9801 5.87875 15.6429L15.9004 5.6212C16.2377 5.28394 16.7845 5.28394 17.1218 5.6212Z" fill="#EDEDED"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M17.1224 16.8642C16.7851 17.2015 16.2383 17.2015 15.901 16.8642L5.87939 6.84259C5.54213 6.50532 5.54213 5.95851 5.87939 5.62125C6.21665 5.28398 6.76347 5.28398 7.10073 5.62125L17.1224 15.6429C17.4597 15.9802 17.4597 16.527 17.1224 16.8642Z" fill="#EDEDED"/>
+        </svg>
+      </button>
+      <div class="search-brand__content">
+        <form action="serach_by_brand.php" method="get">
+          <div class="search-brand__form-item">
+            <label for="brand_search" class="visually-hidden">
+              Search
+            </label>
+            <input type="search" name="brand_search" class="search-brand__input" placeholder="Start typing your brand" id="brand_search">
+            <button type="button" class="search-brand__submit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.89287 0.0390625C3.14792 0.0390625 0.105469 3.08506 0.105469 6.82646C0.105469 10.5679 3.15144 13.6139 6.89287 13.6139C8.57518 13.6139 10.1161 12.9995 11.3037 11.9824L15.1026 15.7813C15.2042 15.8829 15.341 15.9379 15.4752 15.9379C15.6081 15.9379 15.7456 15.8872 15.8481 15.781C16.0519 15.5768 16.0518 15.2402 15.8477 15.0362L12.0488 11.2373C13.0659 10.0496 13.6803 8.50877 13.6803 6.82646C13.6803 3.08152 10.6343 0.0390625 6.89287 0.0390625ZM1.16033 6.82646C1.16033 3.66567 3.73203 1.09743 6.88937 1.09743C10.0502 1.09743 12.6184 3.66912 12.6184 6.82646C12.6184 9.98384 10.0501 12.559 6.88937 12.559C3.73207 12.559 1.16033 9.9873 1.16033 6.82646Z" fill="#EDEDED"/>
+              </svg>
+            </button>
+          </div>
+        </form>
+        <ul class="search-brand__renault list-reset">
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Accuphase
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Pioneer
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Altec
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Pultec
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Ampex
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              RCA
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Acoustic Research
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Realistic
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Bell
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Rotel
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Bogen
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              The Fisher
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Bose
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Gas
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Brook
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Grommes
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Cerwin Vega
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Hafler
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Crown
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Hallicrafters
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Dynaco
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Heathkit
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Dynaco
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Heathkit
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Eico
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Harman Kardon
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              SAE
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              JBL
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Sansui
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Kenwood
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Scott
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              KHL
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Sherwood
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Knight
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Sony
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Lafayette
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Marantz
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Stromberg
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              McIntosh
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Sumo
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Mitsubishi
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Trio
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Onkyo
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Yamaha
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Phase Linear
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Leak
+            </a>
+          </li>
+          <li class="search-brand__renault-item">
+            <a href="#" class="search-brand__renault-link">
+              Pilot
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="search-brand__footer">
+        <p class="search-brand__footer__text">
+          Do not see your brand -
+          <a href="#">
+            Contact Us
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
 </div>
 <script src="js/scripts.min.js"></script>
 </body>
