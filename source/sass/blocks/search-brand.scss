@@ -1,0 +1,244 @@
+.search-brand {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: $dark-blue;
+  color: $white;
+  z-index: 70;
+}
+
+.search-brand .container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 54px;
+  padding-bottom: 60px;
+  overflow-y: auto;
+}
+
+.search-brand--open {
+  display: flex;
+
+  @include animation(fadeIn);
+}
+
+.search-brand--open .container {
+  height: var(--document-height);
+}
+
+.search-brand__close {
+  position: relative;
+  margin: 0 auto;
+  padding: 7px;
+  width: 30px;
+  height: 31px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @include transition(all);
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+}
+
+.search-brand__inner {
+  flex-grow: 1;
+  display: flex;
+  margin: -54px -15px -60px -15px;
+  padding: 54px 15px 60px 15px;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.search-brand__close-line {
+  position: relative;
+  display: block;
+  height: 1px;
+  width: 100%;
+  margin-bottom: 4px;
+  background-color: $white;
+  border-radius: 0;
+
+  &:nth-child(1) {
+    top: 5px;
+    transform: rotate(45deg);
+  }
+
+  &:nth-child(2) {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}
+
+.search-brand__content {
+  padding-top: 45px;
+  padding-bottom: 60px;
+  flex: 1 0 auto;
+}
+
+.search-brand__footer {
+  flex: 0 0 auto;
+}
+
+.search-brand__form-item {
+  position: relative;
+}
+
+.search-brand__input {
+  height: 40px;
+  width: 100%;
+  padding-left: 14px;
+  padding-right: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  color: $gray;
+  letter-spacing: 0.05em;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $gray;
+  appearance: none;
+  border-radius: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: rgba($gray, 0.5);
+  }
+}
+
+.search-brand__submit {
+  position: absolute;
+  right: -8px;
+  top: -2px;
+  width: 30px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+}
+
+.search-brand__footer__text {
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: $gray;
+}
+
+.search-brand__footer__text  a {
+  color: $gray;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  text-decoration: none;
+
+  @include transition(all);
+
+  &:hover {
+    color: rgba($gray, 0.6);
+  }
+}
+
+.search-brand__result {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 20px;
+}
+
+.search-brand__result-link {
+  color: $gray;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  text-decoration: none;
+
+  @include transition(all);
+
+  &:hover {
+    color: rgba($gray, 0.6);
+  }
+}
+
+@media (min-width: 600px) {
+  .search-brand__result {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .search-brand__content {
+    max-width: 540px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .search-brand__result {
+    grid-column-gap: 116px;
+  }
+
+  .search-brand__inner {
+    margin: -54px -39px -60px;
+    padding: 54px 39px 60px;
+  }
+}
+
+@media(min-width: 1100px) {
+  .search-brand__inner {
+    margin: 0;
+    padding: 0;
+  }
+
+  .search-brand--open .container {
+    padding: 0;
+    height: auto;
+    overflow-y: initial;
+  }
+
+  .search-brand--open {
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .search-brand {
+    padding-top: 57px;
+    padding-bottom: 60px;
+    background-color: rgba($dark-blue, 0.95);
+  }
+}
+
+@media (min-width: 1199px) {
+  .search-brand__form-item {
+    max-width: 540px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .search-brand__content {
+    max-width: 100%;
+    padding-bottom: 121px;
+  }
+
+  .search-brand__result {
+    margin-top: 126px;
+    grid-template-columns: repeat(4, 175px);
+    justify-content: center;
+  }
+
+  .search-brand__result-link {
+    font-size: 16px;
+  }
+}
