@@ -12,6 +12,16 @@
   margin-top: 39px;
 }
 
+.wrapper--not-found main {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper--not-found .site-footer {
+  margin-top: 0;
+}
+
+
 @media (min-width: 768px) {
   .wrapper  .site-footer {
     margin-top: 128px;
@@ -19,6 +29,10 @@
 
   .wrapper--home .site-footer {
     margin-top: 106px;
+  }
+
+  .wrapper--not-found .site-footer {
+    margin-top: 0;
   }
 }
 
@@ -29,5 +43,9 @@
 
   .wrapper--home .site-footer {
     margin-top: 106px;
+  }
+
+  .wrapper--not-found .site-footer {
+    margin-top: 0;
   }
 }

@@ -3,6 +3,8 @@
 (function() {
   const ESCAPE = 'Escape';
 
+  const HEADER_HEIGHT = 59;
+
   const BreakPoint = {
     MOBILE_SMALL: 576,
     MOBILE: 767,
@@ -17,6 +19,23 @@
     OVERFLOW_HIDDEN: 'overflow-hidden'
   };
 
+  const applyViewPort = () => {
+    const doc = document.documentElement;
+    doc.style.setProperty('--document-height', `${window.innerHeight}px`);
+  };
+
+  const upDateViewPort = () => {
+    window.addEventListener('resize', applyViewPort);
+
+    window.addEventListener('orientationchange', applyViewPort);
+
+    window.addEventListener('scroll', applyViewPort);
+
+    applyViewPort();
+  };
+
+  upDateViewPort();
+
   const root = document.querySelector('html');
   const siteHeader = document.querySelector('.site-header');
 
@@ -24,31 +43,30 @@
     /*-- Menu --*/
     const  nav = siteHeader.querySelector('nav');
     const menuButton = siteHeader.querySelector('.burger');
-    const headerHeight = nav.offsetHeight;
 
     const closeMenu = () => {
       if (menuButton.classList.contains(ActiveClass.BURGER_CLOSE) && nav.classList.contains(ActiveClass.NAV_OPEN)) {
         menuButton.classList.remove(ActiveClass.BURGER_CLOSE);
         nav.classList.remove(ActiveClass.NAV_OPEN);
-        root.classList.remove(ActiveClass.OVERFLOW_HIDDEN);
+        root.classList.remove('show-main-menu');
       }
     };
 
     const toggleShowMenuClickHandler = () => {
       menuButton.classList.toggle(ActiveClass.BURGER_CLOSE);
       nav.classList.toggle(ActiveClass.NAV_OPEN);
-      root.classList.toggle(ActiveClass.OVERFLOW_HIDDEN);
+      root.classList.toggle('show-main-menu');
     };
 
     menuButton.addEventListener('click', toggleShowMenuClickHandler);
 
-    window.addEventListener('scroll', (evt) => {
-      if (window.scrollY > headerHeight) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > HEADER_HEIGHT) {
         siteHeader.classList.add('site-header--fixed');
-        root.style = `padding-top: ${headerHeight}px`;
+        document.body.style = `padding-top: ${HEADER_HEIGHT}px`;
       } else {
         siteHeader.classList.remove('site-header--fixed');
-        root.style = '0';
+        document.body.style = '0';
       }
     });
 
@@ -139,15 +157,11 @@
     mainSearchToggle.addEventListener('click', toggleShowSearchClickHandler);
 
     /*-- Menu --*/
-
-    const styles = getComputedStyle(document.documentElement);
-    const documentHeightValue = styles.getPropertyValue('--document-height');
     const menuItemWithDropdownElements = [...nav.querySelectorAll('.main-menu__item--drop')];
 
     let currentDocumentWidth = document.body.offsetWidth;
-    let currentDocumentHeight = document.body.offsetHeight;
 
-    const createMainMenuToggleElements = () => {
+     const createMainMenuToggleElements = () => {
       menuItemWithDropdownElements.forEach((item) => {
         const toggle = document.createElement('span');
         toggle.classList.add('main-menu__item-toggle');
@@ -204,30 +218,29 @@
       });
     };
 
-    const getMenuBehaviorByBreakpoint = (currentDocumentWidth, currentDocumentHeight) => {
+    const getMenuBehaviorByBreakpoint = (currentDocumentWidth) => {
       if (currentDocumentWidth > BreakPoint.MOBILE && currentDocumentWidth < BreakPoint.TABLET) {
         getTabletMenuBehavior();
       } else if (currentDocumentWidth < BreakPoint.MOBILE) {
-        document.documentElement.style.setProperty(documentHeightValue, `${currentDocumentHeight}px`);
         getMobileMenuBehavior();
       } else if (currentDocumentWidth > BreakPoint.TABLET) {
         menuButton.classList.remove(ActiveClass.BURGER_CLOSE);
         nav.classList.remove(ActiveClass.NAV_OPEN);
-        root.classList.remove(ActiveClass.OVERFLOW_HIDDEN);
+        root.classList.remove('show-main-menu');
         removeMainMenuToggleElements();
       }
     };
 
-    getMenuBehaviorByBreakpoint(currentDocumentWidth, currentDocumentHeight);
+    getMenuBehaviorByBreakpoint(currentDocumentWidth);
 
     window.addEventListener('resize', () => {
       currentDocumentWidth = document.body.offsetWidth;
-      currentDocumentHeight = document.body.offsetHeight;
-      getMenuBehaviorByBreakpoint(currentDocumentWidth, currentDocumentHeight);
+      getMenuBehaviorByBreakpoint(currentDocumentWidth);
     });
 
     window.header = {
-      root
+      root,
+      applyViewPort
     }
   }
 })();

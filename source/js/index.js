@@ -108,11 +108,13 @@
 
   const openSearchByBrandClickHandler = (evt) => {
     evt.preventDefault();
+    window.header.applyViewPort();
     window.header.root.classList.add('overflow-hidden');
     searchBrandSection.classList.add('search-brand--open');
   };
 
   const closeSearchByBrandClickHandler = () => {
+    window.header.applyViewPort();
     window.header.root.classList.remove('overflow-hidden');
     searchBrandSection.classList.remove('search-brand--open');
   };

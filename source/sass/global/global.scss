@@ -58,6 +58,28 @@ textarea {
   overflow: hidden;
 }
 
+@media(max-width: 767px) {
+  .show-main-menu {
+    overflow-y: hidden;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .show-main-menu body {
+    padding-top: 59px;
+  }
+}
+
+@media (min-width: 1199px) {
+  .overflow-hidden body {
+    padding-right: 17px;
+  }
+
+  .overflow-hidden .site-header--fixed {
+    padding-right: 17px;
+  }
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;

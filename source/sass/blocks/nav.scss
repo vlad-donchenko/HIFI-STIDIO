@@ -55,6 +55,7 @@
   flex-direction: column;
   padding-top: 18px;
   margin-top: 14px;
+  padding-bottom: 18px;
   height: calc(var(--document-height) - 59px);
 }
 
@@ -83,6 +84,7 @@
 
   .nav--open .nav__menu {
     padding-top: 0;
+    padding-bottom: 0;
   }
 
   .nav__menu {
