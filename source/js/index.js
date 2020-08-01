@@ -103,23 +103,24 @@
   }
 
   const brandSearchButton = document.querySelector('.brands__item--search');
-  const searchBrandSection = document.querySelector('.search-brand');
-  const closeSearchByBrandButton = searchBrandSection.querySelector('.search-brand__close');
-
-  const openSearchByBrandClickHandler = (evt) => {
-    evt.preventDefault();
-    window.header.applyViewPort();
-    window.header.root.classList.add('overflow-hidden');
-    searchBrandSection.classList.add('search-brand--open');
-  };
-
-  const closeSearchByBrandClickHandler = () => {
-    window.header.applyViewPort();
-    window.header.root.classList.remove('overflow-hidden');
-    searchBrandSection.classList.remove('search-brand--open');
-  };
 
   if (brandSearchButton) {
+    const searchBrandSection = document.querySelector('.search-brand');
+    const closeSearchByBrandButton = searchBrandSection.querySelector('.search-brand__close');
+
+    const openSearchByBrandClickHandler = (evt) => {
+      evt.preventDefault();
+      window.header.applyViewPort();
+      window.header.root.classList.add('overflow-hidden');
+      searchBrandSection.classList.add('search-brand--open');
+    };
+
+    const closeSearchByBrandClickHandler = () => {
+      window.header.applyViewPort();
+      window.header.root.classList.remove('overflow-hidden');
+      searchBrandSection.classList.remove('search-brand--open');
+    };
+
     closeSearchByBrandButton.addEventListener('click', closeSearchByBrandClickHandler);
     brandSearchButton.addEventListener('click', openSearchByBrandClickHandler);
   }

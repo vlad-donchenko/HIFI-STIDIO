@@ -22,6 +22,11 @@
 }
 
 
+.wrapper--coming-soon {
+  background-color: $dark-blue;
+  color: $gray;
+}
+
 @media (min-width: 768px) {
   .wrapper  .site-footer {
     margin-top: 128px;

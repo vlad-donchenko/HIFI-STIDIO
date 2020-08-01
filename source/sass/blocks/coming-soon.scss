@@ -1,0 +1,156 @@
+.coming-soon {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.coming-soon__header {
+  display: flex;
+  justify-content: center;
+}
+
+.coming-soon__title {
+  margin: 0 0 287px 0;
+  color: $brown;
+  text-align: center;
+  font-size: 35px;
+  line-height: 1.1;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+}
+
+.coming-soon__sub-title {
+  margin-top: 0;
+  margin-bottom: 68px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  font-size: 22px;
+}
+
+.coming-soon__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.coming-soon__content-info {
+  padding: 105px 0 60px 0;
+  background-image: url("../img/coming-soon/background-mobile.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center 64px;
+}
+
+.coming-soon__pause {
+  margin: 0;
+  text-align: center;
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 0.05em;
+  color: $brown;
+}
+
+.coming-soon__pause-light {
+  color: $gray;
+  font-weight: 500;
+}
+
+.coming-soon__social {
+  justify-content: center;
+}
+
+.coming-soon__inner {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 375px) {
+  .coming-soon__content-info {
+    background-position: -36% 64px;
+    background-size: 357px 403px;
+  }
+}
+
+@media (min-width: 378px) {
+  .coming-soon__content-info {
+    background-position: center 64px;
+  }
+}
+
+@media (min-width: 768px) {
+  .coming-soon__title {
+    line-height: 1.1;
+    margin-bottom: 311px;
+    font-size: 56px;
+  }
+
+  .coming-soon__pause {
+    font-size: 43px;
+  }
+
+  .coming-soon__content-info {
+    padding: 160px 0 125px 0;
+    background-image: url("../img/coming-soon/background-tablet.png");
+    background-size: 556px 553px;
+    background-position: 87% 31px;
+  }
+
+  .coming-soon__sub-title {
+    margin-bottom: 123px;
+  }
+}
+
+@media (min-width: 800px) {
+  .coming-soon__content-info {
+    background-position: 75% 31px;
+  }
+}
+
+@media (min-width: 991px) {
+  .coming-soon__content-info {
+    background-position: 70% 31px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .coming-soon__content-info {
+    background-position: 65% 31px;
+  }
+}
+
+@media (min-width: 1199px) {
+  .coming-soon__title {
+    text-align: left;
+    margin-bottom: 0;
+    max-width: 450px;
+  }
+
+  .coming-soon__sub-title {
+    line-height: 1.2;
+    font-size: 56px;
+    text-align: left;
+    max-width: 450px;
+    margin-bottom: 54px;
+  }
+
+  .coming-soon__content-info {
+    padding-top: 232px;
+    padding-left: 164px;
+    padding-bottom: 158px;
+    background-position: 107% -21px;
+    background-image: url("../img/coming-soon/background-desktop.png");
+    background-size: 588px 588px;
+  }
+
+  .coming-soon__pause {
+    padding-left: 277px;
+    text-align: left;
+    font-size: 22px;
+  }
+}
+
