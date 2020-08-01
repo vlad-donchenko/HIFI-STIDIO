@@ -58,6 +58,11 @@ textarea {
   overflow: hidden;
 }
 
+.modal-cart-open .overlay {
+  display: block;
+}
+
+
 @media(max-width: 767px) {
   .show-main-menu {
     overflow-y: hidden;
@@ -67,6 +72,23 @@ textarea {
 @media (min-width: 768px) and (max-width: 1199px) {
   .show-main-menu body {
     padding-top: 59px;
+  }
+}
+
+@media (max-width: 1198px) {
+  .modal-cart-open .site-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .modal-cart-open body {
+    padding-top: 59px;
+  }
+
+  .modal-cart-open .site-header--fixed,
+  .show-main-menu .site-header--fixed {
+    animation: none;
   }
 }
 
@@ -83,10 +105,6 @@ textarea {
 @keyframes fadeIn {
   0% {
     opacity: 0;
-  }
-
-  50% {
-    opacity: 0.5;
   }
 
   100% {
@@ -108,5 +126,19 @@ textarea {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes bounceRight {
+  0% {
+    transform: translateX(1000px);
+  }
+
+  50% {
+    transform: translateX(500px);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }

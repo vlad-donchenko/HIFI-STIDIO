@@ -6,6 +6,6 @@
 
 @mixin animation($property) {
   animation-name: $property;
-  animation-duration: $animation-duration;
+  animation-duration: 0.5s;
   animation-timing-function: $animation-timing-function;
 }

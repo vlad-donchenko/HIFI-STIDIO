@@ -1,0 +1,22 @@
+.delete {
+  padding: 0;
+  margin: 0;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: $brown;
+  border-radius: 4px;
+
+  @include transition(all);
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+}

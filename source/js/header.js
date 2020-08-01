@@ -238,6 +238,55 @@
       getMenuBehaviorByBreakpoint(currentDocumentWidth);
     });
 
+    /*-- Cart --*/
+
+    const openCartButton = document.querySelector('.user-info__link--cart');
+    const modalCart = document.querySelector('.modal-cart');
+    const closeCartButton = modalCart.querySelector('.modal-cart__close');
+    const modalCartOverlay = document.querySelector('.overlay--modal-cart');
+
+    const closeModalCart = () => {
+      modalCart.classList.remove('modal-cart--open');
+      root.classList.remove('modal-cart-open');
+      root.classList.remove('overflow-hidden');
+
+      document.removeEventListener('keydown', closeModalCartKeyPressHandler);
+      document.removeEventListener('click', closeModalCartOutsideClick);
+    };
+
+    const closeModalCartOutsideClick = (evt) => {
+      if (!modalCart.contains(evt.target) && !openCartButton.contains(evt.target)) {
+        closeModalCart();
+      }
+    };
+
+    const closeModalCartKeyPressHandler = (evt) => {
+      const isEsc = evt.key === ESCAPE;
+
+      if (isEsc) {
+        closeModalCart();
+      }
+    };
+
+    const toggleModalCartClickHandler = (evt) => {
+      evt.preventDefault();
+      modalCart.classList.toggle('modal-cart--open');
+      root.classList.toggle('modal-cart-open');
+      root.classList.toggle('overflow-hidden');
+
+      document.addEventListener('keydown', closeModalCartKeyPressHandler);
+      document.addEventListener('click', closeModalCartOutsideClick);
+    };
+
+    const closeModalCartClickHandler = (evt) => {
+      evt.preventDefault();
+      closeModalCart();
+    };
+
+    openCartButton.addEventListener('click', toggleModalCartClickHandler);
+    closeCartButton.addEventListener('click', closeModalCartClickHandler);
+    modalCartOverlay.addEventListener('click', closeModalCartClickHandler);
+
     window.header = {
       root,
       applyViewPort
