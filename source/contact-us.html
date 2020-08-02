@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HIFI AUDIO</title>
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<div style="display: none">
+  <include src="build/img/sprite.svg"></include>
+</div>
+<div class="wrapper">
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <nav class="nav">
+        <a href="/" class="logo nav__logo">
+          <img src="img/logo.svg" width="104" height="31" alt="logo">
+        </a>
+        <div class="burger nav__burger" title="Open Menu">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </div>
+        <ul class="user-info list-reset nav__user-info">
+          <li class="user-info__item user-info__item--search">
+            <a href="#" class="user-info__link user-info__link--search" aria-label="search">
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M7.12724 0.550781C3.3823 0.550781 0.339844 3.59678 0.339844 7.33818C0.339844 11.0796 3.38582 14.1256 7.12724 14.1256C8.80955 14.1256 10.3504 13.5112 11.5381 12.4942L15.337 16.2931C15.4385 16.3946 15.5754 16.4497 15.7095 16.4497C15.8425 16.4497 15.98 16.3989 16.0825 16.2927C16.2863 16.0885 16.2861 15.7519 16.0821 15.5479L12.2832 11.749C13.3002 10.5614 13.9146 9.02049 13.9146 7.33818C13.9146 3.59324 10.8686 0.550781 7.12724 0.550781ZM1.39471 7.33818C1.39471 4.17739 3.96641 1.60915 7.12374 1.60915C10.2845 1.60915 12.8528 4.18084 12.8528 7.33818C12.8528 10.4956 10.2845 13.0707 7.12374 13.0707C3.96645 13.0707 1.39471 10.499 1.39471 7.33818Z"
+                      fill="#EDEDED"/>
+              </svg>
+            </a>
+          </li>
+          <li class="user-info__item user-info__item--user user-option">
+            <a href="#" class="user-info__link user-info__link--user user-option__link-main" aria-label="user">
+              <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M7.40724 9.11717H7.35415C6.382 9.10071 5.59565 8.76157 5.01833 8.11293C3.74092 6.68393 3.95327 4.23423 3.9765 4.00046C4.05945 2.23233 4.90884 1.39271 5.6056 1.00089C6.29905 0.609072 7.02236 0.549805 7.39065 0.549805H7.41055H7.42383H7.44705C8.11727 0.562975 8.71782 0.72102 9.2321 1.01406C9.92223 1.40588 10.7583 2.2455 10.8413 4.00046C10.8645 4.23423 11.0769 6.68393 9.79947 8.11293C9.21883 8.76157 8.43248 9.10071 7.46032 9.11717H7.42714H7.40724ZM4.86429 4.06701C4.86339 4.0719 4.86239 4.07734 4.86239 4.08277C4.85907 4.10253 4.63345 6.35138 5.68523 7.52355C6.09997 7.9911 6.6607 8.22158 7.39065 8.22817H7.40724H7.42383C8.15709 8.22158 8.7145 7.9911 9.13256 7.52355C10.1877 6.34479 9.95541 4.10582 9.95209 4.08277C9.94877 4.07619 9.94877 4.06631 9.94877 4.05643C9.84592 1.82404 8.32299 1.46186 7.42714 1.4421H7.4006H7.38733C6.66402 1.4421 4.97519 1.69563 4.8657 4.05643C4.8657 4.05939 4.86503 4.06302 4.86429 4.06701ZM14.2253 13.1706V13.1805C14.2286 13.3517 14.2319 14.2309 14.066 14.6688C14.0329 14.7544 13.9698 14.8268 13.8935 14.8762L13.8921 14.8771C13.7734 14.9517 11.3912 16.4501 7.41691 16.4501C3.42544 16.4501 1.03984 14.9421 0.940306 14.8762C0.860676 14.8268 0.800953 14.7544 0.767774 14.6688C0.591923 14.2276 0.595241 13.3484 0.598559 13.1772V13.1673C0.601877 13.141 0.601877 13.1147 0.601877 13.085L0.60203 13.0801C0.622013 12.4286 0.66858 10.9107 2.1049 10.4213C2.11485 10.418 2.12481 10.4147 2.13808 10.4114C3.6411 10.0328 4.87869 9.1767 4.89196 9.16683C5.09435 9.02524 5.37306 9.07463 5.51573 9.27548C5.6584 9.47633 5.60863 9.75291 5.40624 9.89449C5.40371 9.89611 5.39864 9.89951 5.39111 9.90454C5.23071 10.0118 3.95519 10.865 2.37697 11.2675C1.60389 11.5408 1.51763 12.3607 1.4944 13.1114C1.4944 13.1266 1.49352 13.141 1.49267 13.155C1.49186 13.1681 1.49108 13.1809 1.49108 13.1937C1.48445 13.49 1.50767 13.9477 1.56076 14.2111C2.10158 14.514 4.22174 15.5644 7.41359 15.5644C10.6187 15.5644 12.7256 14.5173 13.2631 14.2144C13.3162 13.951 13.3361 13.4933 13.3328 13.197C13.3295 13.1706 13.3295 13.1443 13.3295 13.1147C13.3062 12.3639 13.22 11.5441 12.4469 11.2708C10.7946 10.8493 9.47402 9.93729 9.41762 9.89778C9.21522 9.7562 9.16545 9.47962 9.30813 9.27877C9.4508 9.07792 9.7295 9.02853 9.9319 9.17012C9.94517 9.17999 11.1894 10.0361 12.6858 10.4147C12.6908 10.4164 12.6966 10.418 12.7024 10.4197C12.7082 10.4213 12.714 10.423 12.719 10.4246C14.1555 10.9107 14.2019 12.4291 14.2218 13.0836L14.222 13.0883C14.222 13.1036 14.2229 13.118 14.2237 13.1319C14.2245 13.1451 14.2253 13.1578 14.2253 13.1706Z"
+                      fill="#EDEDED"/>
+              </svg>
+            </a>
+            <ul class="user-option__list">
+              <li class="user-option__item">
+                <a href="#" class="user-option__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11" fill="none"
+                       class="user-option__icon">
+                    <path
+                      d="M11.0307 1.16645C10.4024 0.538081 9.57048 0.194644 8.68263 0.194644C7.79478 0.194644 6.96035 0.540625 6.33199 1.16899L6.00382 1.49716L5.67055 1.1639C5.04219 0.535538 4.20522 0.187012 3.31737 0.187012C2.43206 0.187012 1.59764 0.532993 0.971816 1.15881C0.343452 1.78718 -0.00253005 2.6216 1.39301e-05 3.50945C1.39301e-05 4.39731 0.34854 5.22919 0.976904 5.85755L5.75451 10.6352C5.82065 10.7013 5.90969 10.7369 5.99618 10.7369C6.08268 10.7369 6.17172 10.7038 6.23786 10.6377L11.0256 5.86773C11.654 5.23936 12 4.40494 12 3.51709C12.0025 2.62924 11.6591 1.79481 11.0307 1.16645ZM10.5423 5.38183L5.99618 9.91012L1.46026 5.3742C0.96164 4.87557 0.68689 4.21414 0.68689 3.50945C0.68689 2.80477 0.959096 2.14334 1.45772 1.64726C1.95379 1.15118 2.61523 0.876431 3.31737 0.876431C4.02205 0.876431 4.68603 1.15118 5.18465 1.6498L5.75959 2.22474C5.89442 2.35957 6.11066 2.35957 6.24549 2.22474L6.81535 1.65489C7.31397 1.15627 7.97795 0.881519 8.68009 0.881519C9.38223 0.881519 10.0437 1.15627 10.5423 1.65235C11.0409 2.15097 11.3131 2.8124 11.3131 3.51709C11.3157 4.22177 11.0409 4.88321 10.5423 5.38183Z"
+                      fill="#252A37"/>
+                  </svg>
+                  Favorites
+                </a>
+              </li>
+              <li class="user-option__item">
+                <a href="#" class="user-option__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14" fill="none"
+                       class="user-option__icon">
+                    <path
+                      d="M11.9945 4.00064C11.9945 3.95112 11.9835 3.9016 11.9615 3.85483C11.9175 3.7613 11.8322 3.69802 11.7387 3.67877L6.1348 0.960747C6.04402 0.91673 5.93673 0.91673 5.84594 0.960747L0.18707 3.70353C0.0770289 3.7558 0.00550206 3.86584 0 3.98963V3.99238C0 3.99513 0 3.99789 0 4.00339V10.8865C0 11.013 0.0715269 11.1286 0.18707 11.1836L5.84594 13.9264C5.84869 13.9264 5.84869 13.9264 5.85144 13.9291C5.8597 13.9319 5.86795 13.9346 5.8762 13.9401C5.87895 13.9401 5.88171 13.9429 5.88721 13.9429C5.89546 13.9456 5.90371 13.9484 5.91197 13.9511C5.91472 13.9511 5.91747 13.9539 5.92022 13.9539C5.92847 13.9566 5.93948 13.9566 5.94773 13.9594C5.95048 13.9594 5.95323 13.9594 5.95598 13.9594C5.96699 13.9594 5.98074 13.9621 5.99175 13.9621C6.00275 13.9621 6.01651 13.9621 6.02751 13.9594C6.03026 13.9594 6.03301 13.9594 6.03576 13.9594C6.04402 13.9594 6.05502 13.9566 6.06327 13.9539C6.06602 13.9539 6.06878 13.9511 6.07153 13.9511C6.07978 13.9484 6.08803 13.9456 6.09629 13.9429C6.09904 13.9429 6.10179 13.9401 6.10729 13.9401C6.11554 13.9374 6.1238 13.9346 6.13205 13.9291C6.1348 13.9291 6.1348 13.9291 6.13755 13.9264L11.8129 11.1753C11.9257 11.1203 12 11.0048 12 10.8782V4.00889C11.9945 4.00614 11.9945 4.00339 11.9945 4.00064ZM5.989 1.62375L10.8968 4.00339L9.08941 4.88097L4.18157 2.50132L5.989 1.62375ZM5.989 6.38303L1.08116 4.00339L3.42503 2.86721L8.33288 5.24685L5.989 6.38303ZM0.660248 4.53434L5.65887 6.958V13.101L0.660248 10.6774V4.53434ZM6.31912 13.101V6.958L8.66575 5.81907V7.42567C8.66575 7.60724 8.81431 7.7558 8.99587 7.7558C9.17744 7.7558 9.326 7.60724 9.326 7.42567V5.4972L11.3342 4.52333V10.6664L6.31912 13.101Z"
+                      fill="#252A37"/>
+                  </svg>
+                  Orders
+                </a>
+              </li>
+              <li class="user-option__item">
+                <a href="#" class="user-option__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none"
+                       class="user-option__icon">
+                    <path
+                      d="M11.3858 5.70222L10.5435 5.55934C10.4558 5.27607 10.343 5.00283 10.2051 4.74213L10.7014 4.04775C10.912 3.75195 10.8794 3.34836 10.6212 3.09267L9.87418 2.34565C9.7338 2.20527 9.5483 2.12756 9.35027 2.12756C9.19485 2.12756 9.04695 2.17519 8.92161 2.26544L8.22473 2.76178C7.95399 2.61889 7.67073 2.50107 7.37744 2.41334L7.23706 1.58109C7.1769 1.22262 6.86856 0.961914 6.50508 0.961914H5.44973C5.08625 0.961914 4.77791 1.22262 4.71775 1.58109L4.57236 2.43339C4.2916 2.52113 4.01836 2.63644 3.75765 2.77682L3.06829 2.28048C2.94295 2.19023 2.79255 2.1426 2.63713 2.1426C2.43909 2.1426 2.25108 2.22031 2.11321 2.36069L1.36369 3.10771C1.10799 3.3634 1.0729 3.76699 1.28347 4.06279L1.78482 4.7672C1.64695 5.03041 1.53665 5.30365 1.45142 5.58691L0.619173 5.72729C0.260705 5.78745 0 6.09579 0 6.45927V7.51462C0 7.8781 0.260705 8.18644 0.619173 8.2466L1.47148 8.39199C1.55921 8.67275 1.67453 8.94599 1.8149 9.20669L1.32107 9.89355C1.1105 10.1894 1.14309 10.5929 1.40129 10.8486L2.14831 11.5956C2.28868 11.736 2.47419 11.8137 2.67222 11.8137C2.82764 11.8137 2.97554 11.7661 3.10088 11.6759L3.80528 11.1745C4.05847 11.3074 4.32419 11.4152 4.59742 11.5004L4.7378 12.3427C4.79797 12.7011 5.1063 12.9618 5.46978 12.9618H6.52764C6.89112 12.9618 7.19946 12.7011 7.25962 12.3427L7.4025 11.5004C7.68577 11.4127 7.95901 11.2999 8.21971 11.162L8.91409 11.6583C9.03943 11.7486 9.18983 11.7962 9.34525 11.7962C9.54329 11.7962 9.72879 11.7185 9.86917 11.5781L10.6162 10.8311C10.8719 10.5754 10.907 10.1718 10.6964 9.876L10.2001 9.17912C10.3379 8.91591 10.4532 8.64267 10.5385 8.36191L11.3808 8.22153C11.7392 8.16137 11.9999 7.85304 11.9999 7.48955V6.4342C12.0049 6.07072 11.7442 5.76239 11.3858 5.70222ZM11.3281 7.48955C11.3281 7.52214 11.3056 7.54972 11.273 7.55473L10.2201 7.7302C10.0873 7.75277 9.98197 7.85053 9.94939 7.97837C9.85413 8.34687 9.70874 8.70033 9.51321 9.02871C9.44553 9.14402 9.45054 9.28691 9.52825 9.39721L10.1474 10.2696C10.165 10.2946 10.1625 10.3322 10.1399 10.3548L9.39288 11.1018C9.37534 11.1194 9.35779 11.1219 9.34525 11.1219C9.33021 11.1219 9.31768 11.1169 9.30765 11.1093L8.4378 10.4902C8.33001 10.4125 8.18462 10.4074 8.06931 10.4751C7.74092 10.6707 7.38746 10.816 7.01897 10.9113C6.88862 10.9439 6.79085 11.0517 6.7708 11.182L6.59282 12.2349C6.5878 12.2675 6.56023 12.29 6.52764 12.29H5.47229C5.4397 12.29 5.41213 12.2675 5.40711 12.2349L5.23164 11.182C5.20908 11.0492 5.11131 10.9439 4.98347 10.9113C4.625 10.8186 4.27906 10.6757 3.95569 10.4902C3.90305 10.4601 3.84289 10.445 3.78523 10.445C3.71755 10.445 3.64736 10.4651 3.5897 10.5077L2.71233 11.1319C2.6998 11.1394 2.68726 11.1444 2.67473 11.1444C2.6647 11.1444 2.64465 11.1419 2.6271 11.1244L1.88008 10.3774C1.85752 10.3548 1.85501 10.3197 1.87256 10.2921L2.48923 9.42729C2.56694 9.31699 2.57195 9.1716 2.50427 9.05629C2.30874 8.73041 2.15833 8.37695 2.06308 8.00846C2.02798 7.88061 1.9227 7.78285 1.79234 7.76029L0.731978 7.5798C0.69939 7.57478 0.676829 7.54721 0.676829 7.51462V6.45927C0.676829 6.42668 0.69939 6.39911 0.731978 6.39409L1.7773 6.21862C1.91016 6.19606 2.01795 6.09829 2.05054 5.96794C2.14329 5.59945 2.28618 5.24348 2.4792 4.9151C2.54688 4.79979 2.53936 4.6569 2.46165 4.54911L1.83747 3.67174C1.81992 3.64667 1.82242 3.60907 1.84499 3.58651L2.592 2.83949C2.60955 2.82194 2.6271 2.81943 2.63963 2.81943C2.65467 2.81943 2.66721 2.82445 2.67724 2.83197L3.54207 3.44863C3.65237 3.52634 3.79776 3.53136 3.91307 3.46367C4.23896 3.26815 4.59241 3.11774 4.96091 3.02248C5.08875 2.98739 5.18652 2.8821 5.20908 2.75175L5.38956 1.69139C5.39458 1.6588 5.42215 1.63624 5.45474 1.63624H6.51009C6.54268 1.63624 6.57026 1.6588 6.57527 1.69139L6.75074 2.73671C6.7733 2.86957 6.87107 2.97736 7.00142 3.00995C7.37994 3.10521 7.74092 3.25311 8.07683 3.45114C8.19214 3.51882 8.33502 3.51381 8.44532 3.4361L9.31016 2.81442C9.32269 2.8069 9.33523 2.80189 9.34776 2.80189C9.35779 2.80189 9.37784 2.80439 9.39539 2.82194L10.1424 3.56896C10.165 3.59152 10.1675 3.62662 10.1499 3.65419L9.53076 4.52404C9.45305 4.63183 9.44803 4.77722 9.51572 4.89254C9.71124 5.22092 9.85664 5.57438 9.95189 5.94287C9.98448 6.07323 10.0923 6.17099 10.2226 6.19104L11.2755 6.36903C11.3081 6.37404 11.3306 6.40161 11.3306 6.4342V7.48955H11.3281Z"
+                      fill="#252A37"/>
+                    <path
+                      d="M6.00161 4.37109C4.57275 4.37109 3.41211 5.53173 3.41211 6.96059C3.41211 8.38945 4.57275 9.55009 6.00161 9.55009C7.43047 9.55009 8.59111 8.38945 8.59111 6.96059C8.59111 5.53173 7.43047 4.37109 6.00161 4.37109ZM6.00161 8.87326C4.94626 8.87326 4.08894 8.01594 4.08894 6.96059C4.08894 5.90524 4.94626 5.04792 6.00161 5.04792C7.05696 5.04792 7.91428 5.90524 7.91428 6.96059C7.91428 8.01594 7.05696 8.87326 6.00161 8.87326Z"
+                      fill="#252A37"/>
+                  </svg>
+                  Account
+                </a>
+              </li>
+              <li class="user-option__item">
+                <a href="#" class="user-option__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="15" viewBox="0 0 12 15"
+                       class="user-option__icon">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M5.99624 8.50551H5.9495C5.09352 8.49101 4.40113 8.1924 3.8928 7.62127C2.76804 6.36303 2.95502 4.20607 2.97547 4.00023C3.0485 2.44338 3.79639 1.7041 4.4099 1.3591C5.02048 1.0141 5.65735 0.961914 5.98164 0.961914H5.99916H6.01085H6.0313C6.62143 0.973511 7.15021 1.11267 7.60304 1.37069C8.2107 1.71569 8.94691 2.45498 9.01994 4.00023C9.04039 4.20607 9.22736 6.36303 8.10261 7.62127C7.59135 8.1924 6.89897 8.49101 6.04299 8.50551H6.01377H5.99624ZM3.75717 4.05882C3.75638 4.06313 3.75549 4.06792 3.75549 4.0727C3.75257 4.0901 3.55391 6.07022 4.48001 7.10232C4.84519 7.514 5.33892 7.71694 5.98164 7.72274H5.99624H6.01085C6.65649 7.71694 7.14729 7.514 7.5154 7.10232C8.44442 6.06442 8.23991 4.093 8.23699 4.0727C8.23407 4.06691 8.23407 4.05821 8.23407 4.04951C8.14351 2.08389 6.80256 1.76498 6.01377 1.74758H5.9904H5.97871C5.34184 1.74758 3.85482 1.97082 3.75841 4.04951C3.75841 4.05212 3.75782 4.05531 3.75717 4.05882ZM11.9992 12.0744V12.0831C12.0021 12.2338 12.005 13.0079 11.859 13.3935C11.8297 13.4689 11.7742 13.5326 11.707 13.5761L11.7058 13.5769C11.6013 13.6426 9.50379 14.9619 6.00437 14.9619C2.48987 14.9619 0.389348 13.6341 0.301704 13.5761C0.23159 13.5326 0.179004 13.4689 0.149789 13.3935C-0.00504772 13.005 -0.00212633 12.2309 0.000795114 12.0802V12.0715C0.00371656 12.0483 0.00371663 12.0251 0.00371663 11.999L0.00385078 11.9946C0.0214464 11.421 0.0624487 10.0845 1.32713 9.65358C1.3359 9.65069 1.34466 9.64779 1.35635 9.64489C2.67976 9.31149 3.76946 8.55771 3.78115 8.54901C3.95936 8.42435 4.20476 8.46783 4.33038 8.64468C4.456 8.82153 4.41218 9.06506 4.23397 9.18972C4.23175 9.19115 4.22728 9.19414 4.22064 9.19858C4.0794 9.29305 2.95631 10.0442 1.56669 10.3987C0.885994 10.6393 0.810036 11.3612 0.789586 12.0222C0.789586 12.0356 0.788812 12.0483 0.788061 12.0606C0.787353 12.0722 0.786665 12.0834 0.786665 12.0947C0.780822 12.3556 0.801272 12.7586 0.848015 12.9905C1.32421 13.2572 3.19102 14.1821 6.00145 14.1821C8.82357 14.1821 10.6787 13.2601 11.152 12.9934C11.1987 12.7615 11.2162 12.3585 11.2133 12.0976C11.2104 12.0744 11.2104 12.0512 11.2104 12.0251C11.1899 11.3641 11.114 10.6422 10.4333 10.4016C8.9784 10.0305 7.81567 9.22741 7.766 9.19262C7.5878 9.06796 7.54397 8.82443 7.6696 8.64758C7.79522 8.47073 8.04062 8.42724 8.21883 8.55191C8.23051 8.56061 9.32606 9.31438 10.6436 9.64779C10.648 9.64924 10.6531 9.65069 10.6582 9.65214C10.6633 9.65359 10.6685 9.65503 10.6728 9.65648C11.9377 10.0845 11.9785 11.4215 11.9961 11.9978L11.9963 12.0019C11.9963 12.0153 11.997 12.028 11.9978 12.0403C11.9985 12.0519 11.9992 12.0631 11.9992 12.0744Z"
+                          fill="#252A37"/>
+                  </svg>
+                  Sing in
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="user-info__item user-info__item--cart">
+            <a href="#" class="user-info__link user-info__link--cart" aria-label="cart">
+              <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M5.03888 3.41462H10.5498C10.4533 1.97687 9.25652 0.840522 7.79432 0.840522C6.33212 0.840522 5.13533 1.97687 5.03888 3.41462ZM11.3918 3.41462H12.5973C13.9236 3.41462 14.9988 4.48981 14.9988 5.81611V14.5983C14.9988 15.9246 13.9236 16.9998 12.5973 16.9998H2.99134C1.66503 16.9998 0.589844 15.9246 0.589844 14.5983V5.81611C0.589844 4.48981 1.66503 3.41462 2.99134 3.41462H4.19688C4.29449 1.51236 5.86779 0 7.79432 0C9.72085 0 11.2942 1.51236 11.3918 3.41462ZM2.99134 4.49529H12.5973C13.3268 4.49529 13.9181 5.08664 13.9181 5.81611V14.5983C13.9181 15.3278 13.3268 15.9191 12.5973 15.9191H2.99134C2.26187 15.9191 1.67051 15.3278 1.67051 14.5983V5.81611C1.67051 5.08664 2.26187 4.49529 2.99134 4.49529Z"
+                      fill="#EDEDED"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="nav__menu">
+          <div class="menu-search nav__search">
+            <form action="main-search.php" method="get">
+              <label for="search_main" class="visually-hidden">
+                Search
+              </label>
+              <input type="search" class="menu-search__input" placeholder="Search" id="search_main">
+              <button type="button" class="menu-search__close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                  <g>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M17.0729 5.62114C17.4102 5.95841 17.4102 6.50522 17.0729 6.84248L7.05126 16.8641C6.714 17.2014 6.16719 17.2014 5.82993 16.8641C5.49266 16.5269 5.49266 15.9801 5.82993 15.6428L15.8516 5.62114C16.1888 5.28388 16.7357 5.28388 17.0729 5.62114Z"
+                          fill="#252A37"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M17.0755 16.8643C16.7382 17.2016 16.1914 17.2016 15.8542 16.8643L5.83252 6.84265C5.49525 6.50538 5.49525 5.95857 5.83252 5.62131C6.16978 5.28404 6.71659 5.28404 7.05386 5.62131L17.0755 15.643C17.4128 15.9802 17.4128 16.527 17.0755 16.8643Z"
+                          fill="#252A37"/>
+                  </g>
+                </svg>
+              </button>
+              <button type="submit" class="menu-search__submit" aria-label="Submit">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M7.12724 0.550781C3.3823 0.550781 0.339844 3.59678 0.339844 7.33818C0.339844 11.0796 3.38582 14.1256 7.12724 14.1256C8.80955 14.1256 10.3504 13.5112 11.5381 12.4942L15.337 16.2931C15.4385 16.3946 15.5754 16.4497 15.7095 16.4497C15.8425 16.4497 15.98 16.3989 16.0825 16.2927C16.2863 16.0885 16.2861 15.7519 16.0821 15.5479L12.2832 11.749C13.3002 10.5614 13.9146 9.02049 13.9146 7.33818C13.9146 3.59324 10.8686 0.550781 7.12724 0.550781ZM1.39471 7.33818C1.39471 4.17739 3.96641 1.60915 7.12374 1.60915C10.2845 1.60915 12.8528 4.18084 12.8528 7.33818C12.8528 10.4956 10.2845 13.0707 7.12374 13.0707C3.96645 13.0707 1.39471 10.499 1.39471 7.33818Z"
+                        fill="#252A37"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+          <ul class="main-menu  list-reset nav__menu__list">
+            <li class="main-menu__item main-menu__item--drop">
+              <a href="#" class="main-menu__link">
+                Products
+              </a>
+              <ul class="main-menu__submenu">
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu-link">
+                    <div class="main-menu__submenu-img-wrapper">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="img/menu/restoration-kits-tablet.png">
+                        <img src="img/menu/restoration-kits-mobile.png" width="95" height="46" alt="Restoration Kits"
+                             class="main-menu__submenu-img">
+                      </picture>
+                    </div>
+                    Restoration Kits
+                  </a>
+                </li>
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu-link">
+                    <div class="main-menu__submenu-img-wrapper">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="img/menu/controls-tablet.png">
+                        <img src="img/menu/controls-mobile.png" width="80" height="52" alt="Controls">
+                      </picture>
+                    </div>
+                    Controls
+                  </a>
+                </li>
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu-link">
+                    <div class="main-menu__submenu-img-wrapper">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="img/menu/bulbs-tablet.png">
+                        <img src="img/menu/bulbs-mobile.png" width="94" height="56" alt="Bulbs">
+                      </picture>
+                    </div>
+                    Bulbs
+                  </a>
+                </li>
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu-link">
+                    <div class="main-menu__submenu-img-wrapper">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="img/menu/audio-gear-tablet.png">
+                        <img src="img/menu/audio-gear-mobile.png" width="78" height="68" alt="Audio Gear">
+                      </picture>
+                    </div>
+                    Audio Gear
+                  </a>
+                </li>
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu-link">
+                    <div class="main-menu__submenu-img-wrapper">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="img/menu/schematics-tablet.png">
+                        <img src="img/menu/schematics-mobile.png" width="64" height="48" alt="Schematics">
+                      </picture>
+                    </div>
+                    Schematics
+                  </a>
+                </li>
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu-link">
+                    <div class="main-menu__submenu-img-wrapper">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="img/menu/Instructions-tablet.png">
+                        <img src="img/menu/Instructions-mobile.png" width="68" height="51" alt="Instructions">
+                      </picture>
+                    </div>
+                    Instructions
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="main-menu__item main-menu__item--drop">
+              <a href="#" class="main-menu__link">
+                Sell
+              </a>
+              <ul class="main-menu__submenu">
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu-link">
+                    <div class="main-menu__submenu-img-wrapper">
+                      <img src="img/menu/restoration-kits-mobile.png" width="95" height="46" alt="Restoration Kits"
+                           class="main-menu__submenu-img">
+                    </div>
+                    Restoration Kits
+                  </a>
+                </li>
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu-link">
+                    <div class="main-menu__submenu-img-wrapper">
+                      <img src="img/menu/controls-mobile.png" width="80" height="52" alt="Controls">
+                    </div>
+                    Controls
+                  </a>
+                </li>
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu-link">
+                    <div class="main-menu__submenu-img-wrapper">
+                      <img src="img/menu/bulbs-mobile.png" width="94" height="56" alt="Bulbs">
+                    </div>
+                    Bulbs
+                  </a>
+                </li>
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu-link">
+                    <div class="main-menu__submenu-img-wrapper">
+                      <img src="img/menu/audio-gear-mobile.png" width="78" height="68" alt="Audio Gear">
+                    </div>
+                    Audio Gear
+                  </a>
+                </li>
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu-link">
+                    <div class="main-menu__submenu-img-wrapper">
+                      <img src="img/menu/schematics-mobile.png" width="64" height="48" alt="Schematics">
+                    </div>
+                    Schematics
+                  </a>
+                </li>
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu-link">
+                    <div class="main-menu__submenu-img-wrapper">
+                      <img src="img/menu/Instructions-mobile.png" width="68" height="51" alt="Instructions">
+                    </div>
+                    Instructions
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="main-menu__item main-menu__item--drop">
+              <a href="#" class="main-menu__link">
+                About
+              </a>
+              <ul class="main-menu__submenu">
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu-link">
+                    <div class="main-menu__submenu-img-wrapper">
+                      <img src="img/menu/restoration-kits-mobile.png" width="95" height="46" alt="Restoration Kits"
+                           class="main-menu__submenu-img">
+                    </div>
+                    Restoration Kits
+                  </a>
+                </li>
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu-link">
+                    <div class="main-menu__submenu-img-wrapper">
+                      <img src="img/menu/controls-mobile.png" width="80" height="52" alt="Controls">
+                    </div>
+                    Controls
+                  </a>
+                </li>
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu-link">
+                    <div class="main-menu__submenu-img-wrapper">
+                      <img src="img/menu/bulbs-mobile.png" width="94" height="56" alt="Bulbs">
+                    </div>
+                    Bulbs
+                  </a>
+                </li>
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu-link">
+                    <div class="main-menu__submenu-img-wrapper">
+                      <img src="img/menu/audio-gear-mobile.png" width="78" height="68" alt="Audio Gear">
+                    </div>
+                    Audio Gear
+                  </a>
+                </li>
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu-link">
+                    <div class="main-menu__submenu-img-wrapper">
+                      <img src="img/menu/schematics-mobile.png" width="64" height="48" alt="Schematics">
+                    </div>
+                    Schematics
+                  </a>
+                </li>
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu-link">
+                    <div class="main-menu__submenu-img-wrapper">
+                      <img src="img/menu/Instructions-mobile.png" width="68" height="51" alt="Instructions">
+                    </div>
+                    Instructions
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="main-menu__item main-menu__item--drop">
+              <a href="#" class="main-menu__link">
+                Support
+              </a>
+              <ul class="main-menu__submenu">
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu-link">
+                    <div class="main-menu__submenu-img-wrapper">
+                      <img src="img/menu/restoration-kits-mobile.png" width="95" height="46" alt="Restoration Kits"
+                           class="main-menu__submenu-img">
+                    </div>
+                    Restoration Kits
+                  </a>
+                </li>
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu-link">
+                    <div class="main-menu__submenu-img-wrapper">
+                      <img src="img/menu/controls-mobile.png" width="80" height="52" alt="Controls">
+                    </div>
+                    Controls
+                  </a>
+                </li>
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu-link">
+                    <div class="main-menu__submenu-img-wrapper">
+                      <img src="img/menu/bulbs-mobile.png" width="94" height="56" alt="Bulbs">
+                    </div>
+                    Bulbs
+                  </a>
+                </li>
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu-link">
+                    <div class="main-menu__submenu-img-wrapper">
+                      <img src="img/menu/audio-gear-mobile.png" width="78" height="68" alt="Audio Gear">
+                    </div>
+                    Audio Gear
+                  </a>
+                </li>
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu-link">
+                    <div class="main-menu__submenu-img-wrapper">
+                      <img src="img/menu/schematics-mobile.png" width="64" height="48" alt="Schematics">
+                    </div>
+                    Schematics
+                  </a>
+                </li>
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu-link">
+                    <div class="main-menu__submenu-img-wrapper">
+                      <img src="img/menu/Instructions-mobile.png" width="68" height="51" alt="Instructions">
+                    </div>
+                    Instructions
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="breadcrumb">
+      <div class="breadcrumb__background">
+        <div class="container breadcrumb__inner">
+          <ol class="breadcrumb__list">
+            <li class="breadcrumb__item">
+              <a href="#" class="breadcrumb__link">
+                Home
+              </a>
+            </li>
+            <li class="breadcrumb__item breadcrumb__item--active">
+              <a class="breadcrumb__link">
+                Contact Us - Get Support
+              </a>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <section class="text-content">
+      <div class="container">
+        <div class="text-content__inner">
+          <h1 class="text-content__page-title">
+            Contact Us - Get Support
+          </h1>
+          <article class="get-support text-content__support">
+            <h3>
+              Need Support? We're here to help!
+            </h3>
+            <p>
+              Do you already have your product and need help
+              with it? Please email
+              <a href="mailto:support@hifiaudio.com">
+                support@hifiaudio.com.
+              </a>
+            </p>
+            <p>
+              Are you considering a product in our store and have
+              questions about it? Please email
+              <a href="#">
+                sales@hifiaudio.com.
+              </a>
+            </p>
+            <p>
+              Question about shipping or tracking? Please email
+              <a href="#">
+                shipping@hifiaudio.com.
+              </a>
+            </p>
+            <p>
+              For everything else, please complete the following
+              form, and we'll get back to you within one business day.
+            </p>
+          </article>
+          <div class="text-content__form">
+            <form action="support.php" method="post">
+              <div class="text-content__form-content">
+                <div class="text-content__form-content-left">
+                  <div class="text-content__form-item">
+                    <div class="input">
+                      <label for="support_name" class="input__label">
+                        Full Name*
+                      </label>
+                      <input type="text" name="support_name" class="input__content" id="support_name" required>
+                    </div>
+                  </div>
+                  <div class="text-content__form-item">
+                    <div class="input">
+                      <label for="support_email" class="input__label">
+                        Email Address*
+                      </label>
+                      <input type="email" name="support_email" class="input__content" id="support_email" required>
+                    </div>
+                  </div>
+                  <div class="text-content__form-item">
+                    <div class="input">
+                      <label for="support_phone" class="input__label">
+                        Phone Number*
+                      </label>
+                      <input type="email" name="support_email" class="input__content" id="support_phone" required>
+                    </div>
+                  </div>
+                  <div class="text-content__form-item">
+                    <div class="input">
+                      <label for="support_rma" class="input__label">
+                        RMA Number*
+                      </label>
+                      <input type="number" name="support_rma" class="input__content" id="support_rma" required>
+                    </div>
+                  </div>
+                  <div class="text-content__form-item">
+                    <div class="input">
+                      <label for="support_order" class="input__label">
+                        Order Number*
+                      </label>
+                      <input type="number" name="support_order" class="input__content" id="support_order" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-content__form-item text-content__form-item--textarea">
+                  <div class="input input--textarea">
+                    <label for="support_comment" class="input__label">
+                      Comments/Questions *
+                    </label>
+                    <textarea name="reviews_create_comment" id="support_comment" class="input__content"
+                              cols="30" rows="10" required></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="text-content__form-submit">
+                <button type="submit" class="button button--fluid">
+                  Submit Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="menu-footer site-footer__menu">
+        <div class="menu-footer__column menu-footer__column--buy">
+          <div class="menu-footer__top">
+            <h3 class="menu-footer__title">
+              Buy
+            </h3>
+            <button type="button" class="menu-footer__toggle"></button>
+          </div>
+          <ul class="menu-footer__list list-reset">
+            <li class="menu-footer__item">
+              <a href="#" class="menu-footer__link">
+                Audio Equipment
+              </a>
+            </li>
+            <li class="menu-footer__item">
+              <a href="#" class="menu-footer__link">
+                Restoration Kits
+              </a>
+            </li>
+            <li class="menu-footer__item">
+              <a href="#" class="menu-footer__link">
+                Bulb Kits
+              </a>
+            </li>
+            <li class="menu-footer__item">
+              <a href="#" class="menu-footer__link">
+                Potentiometers
+              </a>
+            </li>
+            <li class="menu-footer__item">
+              <a href="#" class="menu-footer__link">
+                Instructions
+              </a>
+            </li>
+            <li class="menu-footer__item">
+              <a href="#" class="menu-footer__link">
+                Schematics
+              </a>
+            </li>
+            <li class="menu-footer__item">
+              <a href="#" class="menu-footer__link">
+                Other
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="menu-footer__column menu-footer__column--support">
+          <div class="menu-footer__top">
+            <h3 class="menu-footer__title">
+              Support
+            </h3>
+            <button type="button" class="menu-footer__toggle"></button>
+          </div>
+          <ul class="menu-footer__list list-reset">
+            <li class="menu-footer__item">
+              <a href="#" class="menu-footer__link">
+                Help
+              </a>
+            </li>
+            <li class="menu-footer__item">
+              <a href="#" class="menu-footer__link">
+                Returns & Exchanges
+              </a>
+            </li>
+            <li class="menu-footer__item">
+              <a href="#" class="menu-footer__link">
+                Shipping
+              </a>
+            </li>
+            <li class="menu-footer__item">
+              <a href="#" class="menu-footer__link">
+                Order Tracker
+              </a>
+            </li>
+            <li class="menu-footer__item">
+              <a href="#" class="menu-footer__link">
+                FAQ
+              </a>
+            </li>
+            <li class="menu-footer__item">
+              <a href="#" class="menu-footer__link">
+                Contact Us - Get Support
+              </a>
+            </li>
+            <li class="menu-footer__item">
+              <a href="#" class="menu-footer__link">
+                Contact Us - Make an Offer
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="menu-footer__column menu-footer__column--sell">
+          <div class="menu-footer__top">
+            <h3 class="menu-footer__title">
+              Sell
+            </h3>
+            <button type="button" class="menu-footer__toggle"></button>
+          </div>
+          <ul class="menu-footer__list list-reset">
+            <li class="menu-footer__item">
+              <a href="#" class="menu-footer__link">
+                We Buy Audio Gear
+              </a>
+            </li>
+            <li class="menu-footer__item">
+              <a href="#" class="menu-footer__link">
+                Speakers
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="menu-footer__column menu-footer__column--info">
+          <div class="menu-footer__top">
+            <h3 class="menu-footer__title">
+              Info
+            </h3>
+            <button type="button" class="menu-footer__toggle"></button>
+          </div>
+          <ul class="menu-footer__list list-reset">
+            <li class="menu-footer__item">
+              <a href="#" class="menu-footer__link">
+                About Us
+              </a>
+            </li>
+            <li class="menu-footer__item">
+              <a href="#" class="menu-footer__link">
+                Testimonials
+              </a>
+            </li>
+            <li class="menu-footer__item">
+              <a href="#" class="menu-footer__link">
+                Sustainability
+              </a>
+            </li>
+            <li class="menu-footer__item">
+              <a href="#" class="menu-footer__link">
+                Our Values
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__info">
+        <a href="/" class="logo">
+          <img src="img/logo-footer.svg" width="97" height="101" alt="Logo">
+        </a>
+        <ul class="social list-reset social--footer">
+          <li class="social__item">
+            <a href="#" class="social__link" aria-label="We in instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M5.19538 0.11324C6.56834 0.0523577 9.96596 0.0492515 11.3377 0.11324C14.1439 0.24246 15.5485 1.82975 15.6715 4.44708C15.7324 5.82004 15.7361 9.21704 15.6715 10.5894C15.5696 12.8066 14.5272 14.041 13.1461 14.5772C12.4378 14.8514 11.7413 14.9335 10.4106 14.9581V9.63813H12.0744L12.3385 7.51625H10.4106L10.4101 7.27621V6.0544C10.4101 6.03612 10.4103 6.01801 10.4106 6.00009C10.4115 5.94641 10.4139 5.89433 10.4181 5.844C10.4485 5.48062 10.5731 5.20874 10.9323 5.08887C11.0643 5.04483 11.228 5.02131 11.4302 5.02131H12.52V3.12324C12.4796 3.11768 12.4179 3.11062 12.3385 3.10296C12.2648 3.09585 12.1758 3.08823 12.0744 3.08082C11.8939 3.06763 11.6739 3.05511 11.4302 3.0473C11.2727 3.04226 11.1053 3.03918 10.9323 3.03918C10.7516 3.03918 10.5774 3.05227 10.4106 3.07818C10.3323 3.09036 10.2552 3.10544 10.1803 3.12324C9.25418 3.3434 8.59249 3.99197 8.36823 5.02131C8.31339 5.273 8.2847 5.54747 8.2847 5.844V7.51575H6.55078V9.63764H8.2847V14.9686H8.26622C7.96664 14.9686 7.67667 14.9707 7.39593 14.9728C5.05278 14.9902 3.35219 15.0029 2.06677 13.718C0.790451 12.4417 0.799676 10.7771 0.813252 8.32751C0.814696 8.0669 0.81619 7.7974 0.81619 7.51854C0.81619 7.22059 0.814164 6.93261 0.812204 6.65412C0.795528 4.2842 0.783692 2.60216 2.06677 1.31909C2.92471 0.46114 3.98891 0.169774 5.19538 0.11324Z"
+                      fill="#252A37"></path>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link" aria-label="We in facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M10.7928 0.11324C9.42104 0.0492515 6.02342 0.0523577 4.65046 0.11324C3.44399 0.169774 2.37979 0.46114 1.52184 1.31909C0.238771 2.60216 0.250606 4.2842 0.267282 6.65412C0.269242 6.93261 0.271268 7.22059 0.271268 7.51854C0.271268 7.7974 0.269775 8.0669 0.26833 8.32751C0.254755 10.7771 0.24553 12.4417 1.52184 13.718C2.80727 15.0029 4.50785 14.9902 6.851 14.9728H6.85104C7.13177 14.9707 7.42173 14.9686 7.7213 14.9686H7.76175C10.6033 14.9686 11.5903 14.9686 12.6012 14.5772C13.9823 14.041 15.0247 12.8066 15.1266 10.5894C15.1912 9.21704 15.1875 5.82004 15.1266 4.44708C15.0036 1.82975 13.5989 0.24246 10.7928 0.11324ZM12.964 12.7693C12.0984 13.635 10.924 13.6323 8.38728 13.6265L8.38637 13.6265C8.16891 13.626 7.94143 13.6254 7.70328 13.6254L7.2766 13.6256C4.48044 13.6276 3.30862 13.6285 2.44254 12.76C1.54151 11.8633 1.55641 10.4989 1.57804 8.51874C1.58154 8.19836 1.58521 7.86185 1.58521 7.5086C1.58521 7.20903 1.58253 6.91678 1.57992 6.63274C1.55265 3.6622 1.53361 1.58884 4.67779 1.42781L4.71345 1.42655C5.47674 1.39957 5.73247 1.39053 7.69458 1.39053L7.72254 1.40917C8.00622 1.40917 8.28466 1.40662 8.55678 1.40413C11.4604 1.37759 13.644 1.35763 13.7866 4.50672C13.822 5.2926 13.83 5.52868 13.83 7.51792C13.83 7.69667 13.8302 7.86925 13.8303 8.03597V8.03634C13.8329 10.733 13.834 11.8953 12.964 12.7693ZM7.72117 3.69287C5.60705 3.69287 3.89551 5.40628 3.89551 7.51853C3.89551 9.63264 5.60891 11.3442 7.72117 11.3442C9.83528 11.3442 11.5468 9.63078 11.5468 7.51853C11.5468 5.40442 9.83342 3.69287 7.72117 3.69287ZM7.72117 10.0017C6.34882 10.0017 5.23803 8.89025 5.23803 7.51853C5.23803 6.14681 6.34944 5.03539 7.72117 5.03539C9.09289 5.03539 10.2043 6.14681 10.2043 7.51853C10.2049 8.89025 9.09351 10.0017 7.72117 10.0017ZM12.5917 3.54192C12.5917 4.03565 12.1914 4.4359 11.6977 4.4359C11.204 4.4359 10.8037 4.03565 10.8037 3.54192C10.8037 3.0482 11.204 2.64795 11.6977 2.64795C12.1914 2.64795 12.5917 3.0482 12.5917 3.54192Z"
+                      fill="#252A37"></path>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link" aria-label="We in facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M19.7135 3.57654L19.7144 3.58557C19.7203 3.65167 19.8592 5.22113 19.8593 6.79688V8.2699C19.8593 9.8457 19.7203 11.4152 19.7144 11.4812L19.7122 11.5013C19.6929 11.6562 19.5042 13.0353 18.8516 13.7447C18.0687 14.6061 17.1857 14.6999 16.7611 14.7451H16.7605C16.72 14.7493 16.683 14.7532 16.6501 14.7576L16.6157 14.7612C14.0133 14.9504 10.0832 14.9763 10.0439 14.9764L10.0378 14.9765L10.0318 14.9764C9.83206 14.9735 5.12085 14.9031 3.61823 14.7601L3.57272 14.7538C3.5257 14.7455 3.45679 14.7377 3.37671 14.7286C2.8703 14.6706 1.92877 14.5627 1.18414 13.7479C0.502136 13.0307 0.336334 11.6472 0.319672 11.4913L0.318604 11.4814C0.312744 11.4153 0.173828 9.8457 0.173828 8.2699V6.79688C0.173828 5.22113 0.312744 3.65149 0.318604 3.58557L0.320862 3.56543C0.34024 3.41046 0.52887 2.03125 1.18143 1.32208C1.97562 0.448425 2.86383 0.345886 3.29068 0.296631C3.32416 0.292725 3.35495 0.289246 3.38287 0.285522L3.41757 0.281921C6.04346 0.0926514 9.97369 0.0668335 10.0131 0.0666504L10.0165 0.0665283L10.02 0.0666504C10.0593 0.0668335 13.9896 0.0926514 16.592 0.281921L16.6264 0.285522C16.6557 0.289429 16.6884 0.293152 16.7242 0.297241C17.156 0.346313 18.0538 0.44873 18.8457 1.29193C19.5309 2.00873 19.6968 3.41809 19.7135 3.57654ZM18.5662 11.3683C18.5782 11.2304 18.7056 9.72839 18.7056 8.2699V6.79688C18.7056 5.31482 18.5745 3.79175 18.5658 3.69342C18.5167 3.2439 18.3234 2.41364 18.011 2.0882L18.0063 2.08325C17.5036 1.54706 16.9559 1.48462 16.5935 1.4433C16.557 1.43909 16.5231 1.43518 16.492 1.43127C13.9609 1.24835 10.1532 1.22101 10.0165 1.22009C9.87982 1.22119 6.07077 1.24835 3.517 1.43127C3.49033 1.43475 3.46161 1.43805 3.43097 1.44165L3.42297 1.44257C3.07065 1.48322 2.53793 1.5448 2.03268 2.10052C1.72797 2.43182 1.52521 3.25153 1.4668 3.69897C1.45447 3.83966 1.32742 5.34003 1.32742 6.79688V8.2699C1.32742 9.74878 1.45807 11.2686 1.46725 11.3728C1.51636 11.8134 1.70966 12.6294 2.02203 12.9548L2.03268 12.9662C2.48657 13.4655 3.07681 13.5331 3.508 13.5825C3.59299 13.5921 3.67365 13.6014 3.74829 13.6136C5.20511 13.7489 9.84738 13.8199 10.0428 13.8228C10.217 13.8217 13.9989 13.7938 16.516 13.6118C16.5533 13.6071 16.5944 13.6026 16.6389 13.598C17.0065 13.5591 17.5101 13.5056 18.0003 12.9662C18.3183 12.6207 18.5173 11.7481 18.5662 11.3683ZM8.69766 4.26123L13.0466 6.64081C13.304 6.78168 13.4633 7.05127 13.4622 7.3446C13.461 7.63788 13.2998 7.90631 13.0417 8.04523L8.69254 10.3838C8.57315 10.4481 8.44339 10.48 8.31393 10.48C8.17261 10.48 8.03159 10.4419 7.90436 10.3659C7.66077 10.2204 7.51538 9.96399 7.51538 9.6803V4.96204C7.51538 4.67694 7.66165 4.4201 7.90692 4.27478C8.15204 4.12952 8.4476 4.12439 8.69766 4.26123ZM8.66898 5.56036V9.08673L11.9193 7.33887L8.66898 5.56036Z"
+                      fill="#252A37"></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <div class="container">
+        <div class="site-footer__bottom-inner">
+          <div class="site-footer__payment">
+            <picture>
+              <source media="(min-width: 1199px)" srcset="img/site-footer/payment-tablet.png">
+              <img src="img/site-footer/payment.png" width="147" height="17" alt="pay methods">
+            </picture>
+          </div>
+          <div class="site-footer__created">
+            <p class="site-footer__created-text">
+              Created by
+            </p>
+            <a href="#" class="site-footer__created-link">
+              <img src="img/site-footer/created-by.png" width="72" height="20" alt="Created by Organica">
+            </a>
+          </div>
+          <p class="site-footer__copyright">
+            2020, Hi-Fi Audio.
+            All right reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <section class="modal-cart modal-cart--empty">
+    <h2 class="visually-hidden">
+      Popup cart
+    </h2>
+    <div class="modal-cart__manage">
+      <a href="#" class="modal-cart__close">
+        close
+      </a>
+    </div>
+    <div class="modal-cart__main">
+      <p class="modal-cart__empty">
+        <strong>
+          Empty
+        </strong>
+        Add a
+        <a href="#">
+          product
+        </a>
+        to cart
+      </p>
+    </div>
+  </section>
+  <div class="overlay overlay--modal-cart"></div>
+</div>
+<script src="js/scripts.min.js"></script>
+</body>
+</html>
