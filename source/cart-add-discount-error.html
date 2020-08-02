@@ -396,6 +396,19 @@
           </ol>
         </div>
       </div>
+      <div class="alert alert--error">
+        <div class="container alert__inner">
+          <p class="alert__text">
+            Code not found
+          </p>
+          <button type="button" class="alert__close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23" viewBox="0 0 24 23" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4167 5.87798C17.7539 6.21524 17.7539 6.76205 17.4167 7.09932L7.39501 17.121C7.05775 17.4582 6.51094 17.4582 6.17368 17.121C5.83641 16.7837 5.83641 16.2369 6.17368 15.8996L16.1953 5.87798C16.5326 5.54071 17.0794 5.54071 17.4167 5.87798Z" fill="#EDEDED"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4173 17.1211C17.08 17.4584 16.5332 17.4584 16.196 17.1211L6.17431 7.09948C5.83705 6.76222 5.83705 6.21541 6.17431 5.87814C6.51158 5.54088 7.05839 5.54088 7.39565 5.87814L17.4173 15.8998C17.7546 16.2371 17.7546 16.7839 17.4173 17.1211Z" fill="#EDEDED"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
     <section class="cart">
       <div class="container cart__inner">
@@ -490,6 +503,14 @@
             <div class="cart__promo">
               <div class="promo-code">
                 <div class="promo-code__total">
+                  <div class="promo-code__discount">
+                    <p class="promo-code__discount-title">
+                      Discount
+                    </p>
+                    <p class="promo-code__discount-value">
+                      - $10
+                    </p>
+                  </div>
                   <div class="promo-code__total-current">
                     <p class="promo-code__total-title">
                       Total to pay:
@@ -503,11 +524,11 @@
                   <p class="promo-code__input-title">
                     Coupon code
                   </p>
-                  <div class="input input--small">
+                  <div class="input input--small input--error input--has-value">
                     <label for="promo_code" class="input__label">
                       Paste coupon code here
                     </label>
-                    <input type="text" name="promo_code" class="input__content" id="promo_code">
+                    <input type="text" name="promo_code" class="input__content" id="promo_code" value="9990-32222">
                   </div>
                 </div>
                 <div class="promo-code__buttons">

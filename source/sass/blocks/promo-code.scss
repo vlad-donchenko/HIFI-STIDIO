@@ -1,11 +1,28 @@
 .promo-code__total {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 32px 32px 30px 32px;
   margin-bottom: 30px;
   background-color: $gray;
   border-radius: 11px;
+}
+
+.promo-code__discount-value,
+.promo-code__discount-title {
+  margin: 0;
+  line-height: 1;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.promo-code__total-current {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promo-code__discount {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
 }
 
 .promo-code__total-title {
@@ -67,6 +84,12 @@
 }
 
 @media (min-width: 1199px) {
+  .promo-code__discount {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+  }
+
   .promo-code__total {
     padding: 0;
     margin: 0 0 29px 0;

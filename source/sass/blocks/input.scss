@@ -87,6 +87,10 @@
   color: $brown;
 }
 
+.input--has-value .input__label {
+  transition: none;
+}
+
 .input--textarea.input--active .input__label {
   left: 14px;
 }
@@ -102,4 +106,8 @@
 
 .input--small.input--active .input__label {
   top: -3px;
+}
+
+.input--error .input__content {
+  border-color: $red;
 }

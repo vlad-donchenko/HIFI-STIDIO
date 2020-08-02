@@ -64,12 +64,18 @@
   inputList.forEach((inputItem) => {
     const input = inputItem.querySelector('.input__content');
 
+    if (input.value) {
+      inputItem.classList.add('input--active');
+      inputItem.classList.add('input--has-value');
+    }
+
     input.addEventListener('focus', (evt) => {
       if (evt.target.value.length > 0) {
         return;
       }
 
       inputItem.classList.add('input--active');
+      inputItem.classList.remove('input--has-value');
     });
 
     input.addEventListener('blur', (evt) => {
@@ -78,6 +84,7 @@
       }
 
       inputItem.classList.remove('input--active');
+      inputItem.classList.remove('input--has-value');
     });
   });
 
