@@ -8,6 +8,7 @@
   const categoriesSlider = $('#categories_slider');
   const previewSlider = $('#preview_slider');
   const relatedProductsSlider = $('#related_products_slider');
+  const aboutUsSlider = $('#about_us');
 
   const getPromoSliderSettings = () => ({
     infinite: true,
@@ -97,7 +98,7 @@
     ]
   });
 
-  const getRelatedProductsSlider = () => ({
+  const getRelatedProductsSliderSettings = () => ({
     infinite: false,
     dots: false,
     arrows: false,
@@ -141,11 +142,17 @@
     ]
   });
 
+  const getAboutUsSliderSettings = () => ({
+    arrows: false,
+    dots: true
+  });
+
   promoSlider.slick(getPromoSliderSettings());
   testimonialSlider.slick(getTestimonialSliderSettings());
   categoriesSlider.slick(getCategoriesSliderSettings());
   previewSlider.slick(getPreviewSliderSettings());
-  relatedProductsSlider.slick(getRelatedProductsSlider());
+  relatedProductsSlider.slick(getRelatedProductsSliderSettings());
+  aboutUsSlider.slick(getAboutUsSliderSettings());
 
 
   $(window).on('resize', function () {
@@ -154,7 +161,7 @@
     }
 
     if (!relatedProductsSlider.hasClass('slick-initialized')) {
-      relatedProductsSlider.slick(getRelatedProductsSlider());
+      relatedProductsSlider.slick(getRelatedProductsSliderSettings());
     }
   });
 
