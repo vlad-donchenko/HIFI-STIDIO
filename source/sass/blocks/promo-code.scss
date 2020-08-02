@@ -1,0 +1,114 @@
+.promo-code__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 32px 30px 32px;
+  margin-bottom: 30px;
+  background-color: $gray;
+  border-radius: 11px;
+}
+
+.promo-code__total-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: $dark-blue;
+  letter-spacing: 0.05em;
+}
+
+.promo-code__total-value {
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: $brown;
+}
+
+.promo-code__input-title {
+  display: none;
+}
+
+.promo-code__input {
+  margin-bottom: 30px;
+}
+
+.promo-code__apply {
+  margin-bottom: 14px;
+}
+
+@media (min-width: 600px) {
+  .promo-code {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .promo-code__total {
+    width: 100%;
+  }
+
+  .promo-code__buttons {
+    width: 293px;
+  }
+
+  .promo-code__input {
+    flex-grow: 1;
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+
+  .promo-code__buttons {
+    display: flex;
+  }
+
+  .promo-code__apply {
+    margin-bottom: 0;
+    margin-right: 14px;
+  }
+}
+
+@media (min-width: 1199px) {
+  .promo-code__total {
+    padding: 0;
+    margin: 0 0 29px 0;
+    background-color: transparent;
+  }
+
+  .promo-code__input {
+    order: -1;
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .promo-code {
+    padding: 31px 33px 30px 31px;
+    background-color: $gray;
+    border-radius: 11px;
+  }
+
+  .promo-code__apply {
+    margin-right: 5px;
+  }
+
+  .promo-code__input-title {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 13px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+  }
+
+  .promo-code__total-title {
+    font-size: 12px;
+  }
+
+  .promo-code__input .input__content {
+    background-color: transparent;
+  }
+
+  .promo-code__input .input--active .input__label {
+    background-color: $gray;
+  }
+}
+

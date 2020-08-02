@@ -21,6 +21,21 @@
   padding: 7px 0 4px 0;
 }
 
+.user-info__item--cart--active .user-info__link--cart {
+  position: relative;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: 14px;
+    left: 5px;
+    width: 6px;
+    height: 6px;
+    background-color: $brown;
+    border-radius: 50%;
+  }
+}
+
 @media(min-width: 768px) {
   .user-info {
     max-width: 130px;

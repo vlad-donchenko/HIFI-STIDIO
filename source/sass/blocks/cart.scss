@@ -1,0 +1,35 @@
+.cart__content-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.cart__item {
+  margin-bottom: 14px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.cart__content-order {
+  padding-bottom: 60px;
+  border-bottom: 1px solid $dark-blue;
+}
+
+.cart__promo {
+  margin-top: 29px;
+}
+
+@media (min-width: 1199px) {
+  .cart {
+    padding-top: 67px;
+  }
+
+  .cart__promo {
+    margin-top: 0;
+  }
+
+  .cart-product {
+    padding-right: calc(50% - 124px);
+  }
+}
