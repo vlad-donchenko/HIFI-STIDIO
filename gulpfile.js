@@ -107,6 +107,7 @@ gulp.task("js-min", function () {
     "source/js/catalog.js",
     "source/js/site-footer.js",
     "source/js/tab.js",
+    "source/js/accordion.js",
     "source/js/select.js",
     "source/js/index.js"
   ])

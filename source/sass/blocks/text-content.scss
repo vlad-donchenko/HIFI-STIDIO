@@ -151,6 +151,10 @@
   margin-top: 60px;
 }
 
+.text-content__accordion {
+  margin-top: -5px;
+}
+
 @media (min-width: 768px) {
   .text-content__text ul {
     grid-template-columns: 1fr 1fr;

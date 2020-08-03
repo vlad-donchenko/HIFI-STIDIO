@@ -1,0 +1,150 @@
+.toggle-content__title {
+  margin-top: 0;
+  margin-bottom: 7px;
+  font-weight: 700;
+  line-height: 28px;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  color: $dark-blue;
+}
+
+.toggle-content__title-toggle {
+  padding: 0;
+  text-align: left;
+  line-height: inherit;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  background-color: transparent;
+  border: none;
+
+  @include transition(all);
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+}
+
+.toggle-content__info {
+  display: none;
+}
+
+.toggle-content--open .toggle-content__info {
+  display: block;
+}
+
+.toggle-content__toggle-icon {
+  position: relative;
+  display: inline-block;
+  vertical-align: baseline;
+  width: 10px;
+  height: 10px;
+
+  &::before {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: $brown;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.toggle-content--open .toggle-content__toggle-icon {
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    content: "-";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: $brown;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.toggle-content__info {
+  font-size: 12px;
+  line-height: 16px;
+
+  * {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.toggle-content__info p {
+  font-size: 12px;
+  line-height: 19px;
+}
+
+.toggle-content__info p strong {
+  font-weight: 700;
+}
+
+.toggle-content {
+  margin-bottom: 55px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.toggle-content__info ul {
+  margin: 20px 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+.toggle-content__info ul li {
+  font-size: 12px;
+  line-height: 19px;
+
+  &::before {
+    content: "—";
+  }
+}
+
+.toggle-content__info-multiple ul {
+  margin: 0 0 30px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.toggle-content__info-multiple ul li {
+  font-weight: 500;
+
+  &:before {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .toggle-content__info p,
+  .toggle-content__info ul li {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+
+  .toggle-content__info-multiple ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
