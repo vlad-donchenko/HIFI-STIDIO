@@ -11,6 +11,26 @@
   margin-bottom: 31px;
 }
 
+.text-content__text strong {
+  font-weight: 700;
+}
+
+.text-content__text a {
+  font-weight: 700;
+  color: inherit;
+  text-decoration: none;
+
+  @include transition(all);
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+}
+
 .text-content__inner {
   max-width: 730px;
   margin-left: auto;
@@ -119,8 +139,8 @@
   grid-gap: 30px;
 }
 
-.text-content__support {
-  margin-bottom: 53px;
+.text-content__form {
+  margin-top: 53px;
 }
 
 .text-content__form-item--textarea .input__content {
