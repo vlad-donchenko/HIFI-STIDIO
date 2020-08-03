@@ -222,4 +222,8 @@
   .text-content__support {
     margin-bottom: 59px;
   }
+
+  .text-content__file-chooser {
+    grid-column: 1 / -1;
+  }
 }
