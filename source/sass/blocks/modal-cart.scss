@@ -169,7 +169,7 @@
 
 .modal-cart__empty {
   max-width: 160px;
-  margin: 0 0 0 20px;
+  margin: 0;
   text-align: center;
   color: rgba($dark-blue, 0.5);
   font-size: 12px;
@@ -200,7 +200,11 @@
 }
 
 .modal-cart--empty .modal-cart__manage {
-  padding-left: 78px;
+  justify-content: center;
+}
+
+.modal-cart--empty .modal-cart__main {
+  align-items: center;
 }
 
 @media (min-width: 600px) {
@@ -212,6 +216,19 @@
 }
 
 @media (min-width: 768px) {
+  .modal-cart--empty .modal-cart__manage {
+    padding-left: 78px;
+    justify-content: flex-start;
+  }
+
+  .modal-cart__empty {
+    margin: 0 0 0 20px;
+  }
+
+  .modal-cart--empty .modal-cart__main {
+    align-items: flex-start;
+  }
+
   .modal-cart {
     padding: 61px 65px 39px 65px;
   }

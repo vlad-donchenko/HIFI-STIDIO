@@ -1,0 +1,22 @@
+.file-chooser__label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 59px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: rgba($dark-blue, 0.5);
+  border: 1px dashed rgba($dark-blue, 0.5);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.file-chooser__label-limit {
+  font-size: 8px;
+}
+
+.file-chooser__label-brown {
+  color: $brown;
+}
