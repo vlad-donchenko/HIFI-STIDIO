@@ -155,6 +155,14 @@
   margin-top: -5px;
 }
 
+.text-content--make-offer .text-content__page-title {
+  margin-bottom: 53px;
+}
+
+.text-content--make-offer .text-content__form {
+  margin-top: 57px;
+}
+
 @media (min-width: 768px) {
   .text-content__text ul {
     grid-template-columns: 1fr 1fr;
@@ -217,6 +225,14 @@
 
   .text-content__form-item--textarea .input__content {
     min-height: 345px;
+  }
+
+  .text-content--make-offer .text-content__form-item--textarea .input__content {
+    min-height: 200px;
+  }
+
+  .text-content--make-offer .text-content__form-content-left {
+    grid-gap: 32.5px;
   }
 
   .text-content__support {
