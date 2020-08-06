@@ -229,12 +229,22 @@
 
   .search-brand__content {
     max-width: 100%;
+    padding-top: 113px;
     padding-bottom: 121px;
+  }
+
+  .search-brand__submit {
+    right: 7px;
+  }
+
+  .search-brand__input {
+    padding-right: 40px;
   }
 
   .search-brand__result {
     margin-top: 126px;
     grid-template-columns: repeat(4, 175px);
+    grid-row-gap: 11px;
     justify-content: center;
   }
 
