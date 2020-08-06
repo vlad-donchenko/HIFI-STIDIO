@@ -25,7 +25,8 @@
         </div>
         <ul class="user-info list-reset nav__user-info">
           <li class="user-info__item user-info__item--search">
-            <a href="#" class="user-info__link user-info__link--search" aria-label="search">
+            <a href="#" class="user-info__link user-info__link--search search-modal-button" aria-label="search"
+               data-search="search_nav">
               <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                       d="M7.12724 0.550781C3.3823 0.550781 0.339844 3.59678 0.339844 7.33818C0.339844 11.0796 3.38582 14.1256 7.12724 14.1256C8.80955 14.1256 10.3504 13.5112 11.5381 12.4942L15.337 16.2931C15.4385 16.3946 15.5754 16.4497 15.7095 16.4497C15.8425 16.4497 15.98 16.3989 16.0825 16.2927C16.2863 16.0885 16.2861 15.7519 16.0821 15.5479L12.2832 11.749C13.3002 10.5614 13.9146 9.02049 13.9146 7.33818C13.9146 3.59324 10.8686 0.550781 7.12724 0.550781ZM1.39471 7.33818C1.39471 4.17739 3.96641 1.60915 7.12374 1.60915C10.2845 1.60915 12.8528 4.18084 12.8528 7.33818C12.8528 10.4956 10.2845 13.0707 7.12374 13.0707C3.96645 13.0707 1.39471 10.499 1.39471 7.33818Z"
@@ -102,33 +103,6 @@
           </li>
         </ul>
         <div class="nav__menu">
-          <div class="menu-search nav__search">
-            <form action="main-search.php" method="get">
-              <label for="search_main" class="visually-hidden">
-                Search
-              </label>
-              <input type="search" class="menu-search__input" placeholder="Search" id="search_main">
-              <button type="button" class="menu-search__close">
-                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
-                  <g>
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M17.0729 5.62114C17.4102 5.95841 17.4102 6.50522 17.0729 6.84248L7.05126 16.8641C6.714 17.2014 6.16719 17.2014 5.82993 16.8641C5.49266 16.5269 5.49266 15.9801 5.82993 15.6428L15.8516 5.62114C16.1888 5.28388 16.7357 5.28388 17.0729 5.62114Z"
-                          fill="#252A37"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M17.0755 16.8643C16.7382 17.2016 16.1914 17.2016 15.8542 16.8643L5.83252 6.84265C5.49525 6.50538 5.49525 5.95857 5.83252 5.62131C6.16978 5.28404 6.71659 5.28404 7.05386 5.62131L17.0755 15.643C17.4128 15.9802 17.4128 16.527 17.0755 16.8643Z"
-                          fill="#252A37"/>
-                  </g>
-                </svg>
-              </button>
-              <button type="submit" class="menu-search__submit" aria-label="Submit">
-                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M7.12724 0.550781C3.3823 0.550781 0.339844 3.59678 0.339844 7.33818C0.339844 11.0796 3.38582 14.1256 7.12724 14.1256C8.80955 14.1256 10.3504 13.5112 11.5381 12.4942L15.337 16.2931C15.4385 16.3946 15.5754 16.4497 15.7095 16.4497C15.8425 16.4497 15.98 16.3989 16.0825 16.2927C16.2863 16.0885 16.2861 15.7519 16.0821 15.5479L12.2832 11.749C13.3002 10.5614 13.9146 9.02049 13.9146 7.33818C13.9146 3.59324 10.8686 0.550781 7.12724 0.550781ZM1.39471 7.33818C1.39471 4.17739 3.96641 1.60915 7.12374 1.60915C10.2845 1.60915 12.8528 4.18084 12.8528 7.33818C12.8528 10.4956 10.2845 13.0707 7.12374 13.0707C3.96645 13.0707 1.39471 10.499 1.39471 7.33818Z"
-                        fill="#252A37"/>
-                </svg>
-              </button>
-            </form>
-          </div>
           <ul class="main-menu  list-reset nav__menu__list">
             <li class="main-menu__item main-menu__item--drop">
               <a href="#" class="main-menu__link">
@@ -204,173 +178,20 @@
                 </li>
               </ul>
             </li>
-            <li class="main-menu__item main-menu__item--drop">
+            <li class="main-menu__item">
               <a href="#" class="main-menu__link">
                 Sell
               </a>
-              <ul class="main-menu__submenu">
-                <li class="main-menu__submenu__item">
-                  <a href="#" class="main-menu__submenu-link">
-                    <div class="main-menu__submenu-img-wrapper">
-                      <img src="img/menu/restoration-kits-mobile.png" width="95" height="46" alt="Restoration Kits"
-                           class="main-menu__submenu-img">
-                    </div>
-                    Restoration Kits
-                  </a>
-                </li>
-                <li class="main-menu__submenu__item">
-                  <a href="#" class="main-menu__submenu-link">
-                    <div class="main-menu__submenu-img-wrapper">
-                      <img src="img/menu/controls-mobile.png" width="80" height="52" alt="Controls">
-                    </div>
-                    Controls
-                  </a>
-                </li>
-                <li class="main-menu__submenu__item">
-                  <a href="#" class="main-menu__submenu-link">
-                    <div class="main-menu__submenu-img-wrapper">
-                      <img src="img/menu/bulbs-mobile.png" width="94" height="56" alt="Bulbs">
-                    </div>
-                    Bulbs
-                  </a>
-                </li>
-                <li class="main-menu__submenu__item">
-                  <a href="#" class="main-menu__submenu-link">
-                    <div class="main-menu__submenu-img-wrapper">
-                      <img src="img/menu/audio-gear-mobile.png" width="78" height="68" alt="Audio Gear">
-                    </div>
-                    Audio Gear
-                  </a>
-                </li>
-                <li class="main-menu__submenu__item">
-                  <a href="#" class="main-menu__submenu-link">
-                    <div class="main-menu__submenu-img-wrapper">
-                      <img src="img/menu/schematics-mobile.png" width="64" height="48" alt="Schematics">
-                    </div>
-                    Schematics
-                  </a>
-                </li>
-                <li class="main-menu__submenu__item">
-                  <a href="#" class="main-menu__submenu-link">
-                    <div class="main-menu__submenu-img-wrapper">
-                      <img src="img/menu/Instructions-mobile.png" width="68" height="51" alt="Instructions">
-                    </div>
-                    Instructions
-                  </a>
-                </li>
-              </ul>
             </li>
-            <li class="main-menu__item main-menu__item--drop">
+            <li class="main-menu__item">
               <a href="#" class="main-menu__link">
                 About
               </a>
-              <ul class="main-menu__submenu">
-                <li class="main-menu__submenu__item">
-                  <a href="#" class="main-menu__submenu-link">
-                    <div class="main-menu__submenu-img-wrapper">
-                      <img src="img/menu/restoration-kits-mobile.png" width="95" height="46" alt="Restoration Kits"
-                           class="main-menu__submenu-img">
-                    </div>
-                    Restoration Kits
-                  </a>
-                </li>
-                <li class="main-menu__submenu__item">
-                  <a href="#" class="main-menu__submenu-link">
-                    <div class="main-menu__submenu-img-wrapper">
-                      <img src="img/menu/controls-mobile.png" width="80" height="52" alt="Controls">
-                    </div>
-                    Controls
-                  </a>
-                </li>
-                <li class="main-menu__submenu__item">
-                  <a href="#" class="main-menu__submenu-link">
-                    <div class="main-menu__submenu-img-wrapper">
-                      <img src="img/menu/bulbs-mobile.png" width="94" height="56" alt="Bulbs">
-                    </div>
-                    Bulbs
-                  </a>
-                </li>
-                <li class="main-menu__submenu__item">
-                  <a href="#" class="main-menu__submenu-link">
-                    <div class="main-menu__submenu-img-wrapper">
-                      <img src="img/menu/audio-gear-mobile.png" width="78" height="68" alt="Audio Gear">
-                    </div>
-                    Audio Gear
-                  </a>
-                </li>
-                <li class="main-menu__submenu__item">
-                  <a href="#" class="main-menu__submenu-link">
-                    <div class="main-menu__submenu-img-wrapper">
-                      <img src="img/menu/schematics-mobile.png" width="64" height="48" alt="Schematics">
-                    </div>
-                    Schematics
-                  </a>
-                </li>
-                <li class="main-menu__submenu__item">
-                  <a href="#" class="main-menu__submenu-link">
-                    <div class="main-menu__submenu-img-wrapper">
-                      <img src="img/menu/Instructions-mobile.png" width="68" height="51" alt="Instructions">
-                    </div>
-                    Instructions
-                  </a>
-                </li>
-              </ul>
             </li>
-            <li class="main-menu__item main-menu__item--drop">
+            <li class="main-menu__item">
               <a href="#" class="main-menu__link">
                 Support
               </a>
-              <ul class="main-menu__submenu">
-                <li class="main-menu__submenu__item">
-                  <a href="#" class="main-menu__submenu-link">
-                    <div class="main-menu__submenu-img-wrapper">
-                      <img src="img/menu/restoration-kits-mobile.png" width="95" height="46" alt="Restoration Kits"
-                           class="main-menu__submenu-img">
-                    </div>
-                    Restoration Kits
-                  </a>
-                </li>
-                <li class="main-menu__submenu__item">
-                  <a href="#" class="main-menu__submenu-link">
-                    <div class="main-menu__submenu-img-wrapper">
-                      <img src="img/menu/controls-mobile.png" width="80" height="52" alt="Controls">
-                    </div>
-                    Controls
-                  </a>
-                </li>
-                <li class="main-menu__submenu__item">
-                  <a href="#" class="main-menu__submenu-link">
-                    <div class="main-menu__submenu-img-wrapper">
-                      <img src="img/menu/bulbs-mobile.png" width="94" height="56" alt="Bulbs">
-                    </div>
-                    Bulbs
-                  </a>
-                </li>
-                <li class="main-menu__submenu__item">
-                  <a href="#" class="main-menu__submenu-link">
-                    <div class="main-menu__submenu-img-wrapper">
-                      <img src="img/menu/audio-gear-mobile.png" width="78" height="68" alt="Audio Gear">
-                    </div>
-                    Audio Gear
-                  </a>
-                </li>
-                <li class="main-menu__submenu__item">
-                  <a href="#" class="main-menu__submenu-link">
-                    <div class="main-menu__submenu-img-wrapper">
-                      <img src="img/menu/schematics-mobile.png" width="64" height="48" alt="Schematics">
-                    </div>
-                    Schematics
-                  </a>
-                </li>
-                <li class="main-menu__submenu__item">
-                  <a href="#" class="main-menu__submenu-link">
-                    <div class="main-menu__submenu-img-wrapper">
-                      <img src="img/menu/Instructions-mobile.png" width="68" height="51" alt="Instructions">
-                    </div>
-                    Instructions
-                  </a>
-                </li>
-              </ul>
             </li>
           </ul>
         </div>
@@ -1308,6 +1129,45 @@
       </div>
     </div>
   </footer>
+  <section class="search-modal search-modal--main-nav" id="search_nav">
+    <div class="container">
+      <div class="search-modal__inner">
+        <h2 class="visually-hidden">
+          Search
+        </h2>
+        <div class="search-modal__close" title="Close search">
+          <span class="search-modal__close-line"></span>
+          <span class="search-modal__close-line"></span>
+        </div>
+        <div class="search-modal__content">
+          <form action="serach.php" method="get">
+            <div class="search-modal__form-item">
+              <label for="search" class="visually-hidden">
+                Search
+              </label>
+              <input type="search" name="search" class="search-modal__input" placeholder="Start typing your brand"
+                     id="search">
+              <button type="button" class="search-modal__submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6.89287 0.0390625C3.14792 0.0390625 0.105469 3.08506 0.105469 6.82646C0.105469 10.5679 3.15144 13.6139 6.89287 13.6139C8.57518 13.6139 10.1161 12.9995 11.3037 11.9824L15.1026 15.7813C15.2042 15.8829 15.341 15.9379 15.4752 15.9379C15.6081 15.9379 15.7456 15.8872 15.8481 15.781C16.0519 15.5768 16.0518 15.2402 15.8477 15.0362L12.0488 11.2373C13.0659 10.0496 13.6803 8.50877 13.6803 6.82646C13.6803 3.08152 10.6343 0.0390625 6.89287 0.0390625ZM1.16033 6.82646C1.16033 3.66567 3.73203 1.09743 6.88937 1.09743C10.0502 1.09743 12.6184 3.66912 12.6184 6.82646C12.6184 9.98384 10.0501 12.559 6.88937 12.559C3.73207 12.559 1.16033 9.9873 1.16033 6.82646Z"
+                        fill="#EDEDED"/>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="search-modal__footer">
+          <p class="search-modal__footer__text">
+            Do not see your brand -
+            <a href="#">
+              Contact Us
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="modal-cart modal-cart--empty">
     <h2 class="visually-hidden">
       Popup cart
