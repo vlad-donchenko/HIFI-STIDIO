@@ -1,15 +1,11 @@
 .user-info {
   display: flex;
   flex-wrap: wrap;
-  max-width: 69px;
-}
-
-.user-info__item--search {
-  display: none;
+  max-width: 83px;
 }
 
 .user-info__item {
-  margin-right: 38px;
+  margin-right: 18px;
 
   &:last-child {
     margin-right: 0;
@@ -36,13 +32,19 @@
   }
 }
 
+@media (min-width: 374px) {
+  .user-info {
+    max-width: 131px;
+  }
+
+  .user-info__item {
+    margin-right: 38px;
+  }
+}
+
 @media(min-width: 768px) {
   .user-info {
     max-width: 130px;
-  }
-
-  .user-info__item--search {
-    display: block;
   }
 }
 

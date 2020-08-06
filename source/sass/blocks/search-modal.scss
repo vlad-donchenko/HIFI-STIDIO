@@ -1,4 +1,4 @@
-.search-brand {
+.search-modal {
   position: fixed;
   left: 0;
   top: 0;
@@ -10,7 +10,7 @@
   z-index: 70;
 }
 
-.search-brand .container {
+.search-modal .container {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -19,17 +19,17 @@
   overflow-y: auto;
 }
 
-.search-brand--open {
+.search-modal--open {
   display: flex;
 
   @include animation(fadeIn);
 }
 
-.search-brand--open .container {
+.search-modal--open .container {
   height: var(--document-height);
 }
 
-.search-brand__close {
+.search-modal__close {
   position: relative;
   margin: 0 auto;
   padding: 7px;
@@ -50,7 +50,7 @@
   }
 }
 
-.search-brand__inner {
+.search-modal__inner {
   flex-grow: 1;
   display: flex;
   margin: -54px -15px -60px -15px;
@@ -59,7 +59,7 @@
   overflow-y: auto;
 }
 
-.search-brand__close-line {
+.search-modal__close-line {
   position: relative;
   display: block;
   height: 1px;
@@ -79,21 +79,21 @@
   }
 }
 
-.search-brand__content {
+.search-modal__content {
   padding-top: 45px;
   padding-bottom: 60px;
   flex: 1 0 auto;
 }
 
-.search-brand__footer {
+.search-modal__footer {
   flex: 0 0 auto;
 }
 
-.search-brand__form-item {
+.search-modal__form-item {
   position: relative;
 }
 
-.search-brand__input {
+.search-modal__input {
   height: 40px;
   width: 100%;
   padding-left: 14px;
@@ -117,7 +117,7 @@
   }
 }
 
-.search-brand__submit {
+.search-modal__submit {
   position: absolute;
   right: -8px;
   top: -2px;
@@ -127,7 +127,7 @@
   border: none;
 }
 
-.search-brand__footer__text {
+.search-modal__footer__text {
   margin: 0;
   text-align: center;
   font-size: 12px;
@@ -135,7 +135,7 @@
   color: $gray;
 }
 
-.search-brand__footer__text  a {
+.search-modal__footer__text  a {
   color: $gray;
   font-size: 12px;
   letter-spacing: 0.05em;
@@ -149,7 +149,7 @@
   }
 }
 
-.search-brand__result {
+.search-modal__result {
   margin-top: 60px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -157,7 +157,7 @@
   grid-row-gap: 20px;
 }
 
-.search-brand__result-link {
+.search-modal__result-link {
   color: $gray;
   font-size: 12px;
   letter-spacing: 0.05em;
@@ -172,47 +172,47 @@
 }
 
 @media (min-width: 600px) {
-  .search-brand__result {
+  .search-modal__result {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 @media (min-width: 768px) {
-  .search-brand__content {
+  .search-modal__content {
     max-width: 540px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .search-brand__result {
+  .search-modal__result {
     grid-column-gap: 116px;
   }
 
-  .search-brand__inner {
+  .search-modal__inner {
     margin: -54px -39px -60px;
     padding: 54px 39px 60px;
   }
 }
 
 @media(min-width: 1100px) {
-  .search-brand__inner {
+  .search-modal__inner {
     margin: 0;
     padding: 0;
   }
 
-  .search-brand--open .container {
+  .search-modal--open .container {
     padding: 0;
     height: auto;
     overflow-y: initial;
   }
 
-  .search-brand--open {
+  .search-modal--open {
     height: 100vh;
     overflow-y: auto;
   }
 
-  .search-brand {
+  .search-modal {
     padding-top: 57px;
     padding-bottom: 60px;
     background-color: rgba($dark-blue, 0.95);
@@ -220,35 +220,35 @@
 }
 
 @media (min-width: 1199px) {
-  .search-brand__form-item {
+  .search-modal__form-item {
     max-width: 540px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .search-brand__content {
+  .search-modal__content {
     max-width: 100%;
     padding-top: 113px;
     padding-bottom: 121px;
   }
 
-  .search-brand__submit {
+  .search-modal__submit {
     right: 7px;
   }
 
-  .search-brand__input {
+  .search-modal__input {
     padding-right: 40px;
   }
 
-  .search-brand__result {
+  .search-modal__result {
     margin-top: 126px;
     grid-template-columns: repeat(4, 175px);
     grid-row-gap: 11px;
     justify-content: center;
   }
 
-  .search-brand__result-link {
+  .search-modal__result-link {
     font-size: 16px;
   }
 }

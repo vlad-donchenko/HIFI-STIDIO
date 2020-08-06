@@ -109,52 +109,6 @@
     userOptionToggle.addEventListener('click', toggleShowUserOptionListClickHandle);
 
     /*-- Search --*/
-    const menuSearch = siteHeader.querySelector('.menu-search');
-    const mainSearchToggle = siteHeader.querySelector('.user-info__link--search');
-    const searchInput = menuSearch.querySelector('.menu-search__input');
-    const closeSearchButton = menuSearch.querySelector('.menu-search__close');
-
-    const closeSearchButtonCLickHandler = () => {
-      nav.classList.remove(ActiveClass.NAV_OPEN_SEARCH);
-
-      closeSearchButton.removeEventListener('click', closeSearchButtonCLickHandler);
-      document.removeEventListener('keydown', closeSearchKeyPressHandler);
-      document.removeEventListener('click', closeSearchOutsideClickHandler);
-    };
-
-    const closeSearchOutsideClickHandler = (evt) => {
-      if (!mainSearchToggle.contains(evt.target) && !menuSearch.contains(evt.target)) {
-        closeSearchButtonCLickHandler();
-      }
-    };
-
-    const closeSearchKeyPressHandler = (evt) => {
-      const isEsc = evt.key === ESCAPE;
-
-      if (isEsc && evt.target !== searchInput) {
-        closeSearchButtonCLickHandler();
-      }
-    };
-
-    const showCloseButtonInputHandler = (evt) => {
-      const value = evt.target.value;
-
-      value.length !== 0 ? menuSearch.classList.add('menu-search--searching') :  menuSearch.classList.remove('menu-search--searching');
-    };
-
-    const toggleShowSearchClickHandler = (evt) => {
-      evt.preventDefault();
-
-      nav.classList.toggle(ActiveClass.NAV_OPEN_SEARCH);
-
-      closeMenu();
-      closeSearchButton.addEventListener('click', closeSearchButtonCLickHandler);
-      searchInput.addEventListener('input', showCloseButtonInputHandler);
-      document.addEventListener('keydown', closeSearchKeyPressHandler);
-      document.addEventListener('click', closeSearchOutsideClickHandler);
-    };
-
-    mainSearchToggle.addEventListener('click', toggleShowSearchClickHandler);
 
     /*-- Menu --*/
     const menuItemWithDropdownElements = [...nav.querySelectorAll('.main-menu__item--drop')];
@@ -288,6 +242,7 @@
     modalCartOverlay.addEventListener('click', closeModalCartClickHandler);
 
     window.header = {
+      ESCAPE,
       root,
       applyViewPort
     }

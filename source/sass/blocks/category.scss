@@ -32,6 +32,10 @@
   stroke: $gray;
 }
 
+.category__link:focus .category__img path {
+  stroke: $gray;
+}
+
 .category__title {
   margin: 8px 0 0 0;
   color: inherit;

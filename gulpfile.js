@@ -110,6 +110,7 @@ gulp.task("js-min", function () {
     "source/js/accordion.js",
     "source/js/select.js",
     "source/js/drag-and-drop-loader.js",
+    "source/js/modal-search.js",
     "source/js/index.js"
   ])
     .pipe(concat("scripts.min.js"))
