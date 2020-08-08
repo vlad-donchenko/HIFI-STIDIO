@@ -26,7 +26,7 @@
 .reviews__author {
   margin: 0;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 0.05em;
   line-height: 1.2;
 }
@@ -51,7 +51,7 @@
   font-weight: 700;
   margin-bottom: 14px;
   margin-top: 0;
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 0.05em;
   color: $dark-blue;
 }
@@ -77,9 +77,8 @@
 }
 
 .reviews__privacy-policy .checkbox__label {
-  padding-top: 2px;
   padding-left: 24px;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 500;
   line-height: 1.5;
   color: $brown;
@@ -95,10 +94,6 @@
 }
 
 @media(min-width: 768px) {
-  .reviews__title {
-    font-size: 14px;
-  }
-
   .reviews__author {
     font-size: 14px;
   }

@@ -88,8 +88,10 @@
   });
 
   const getPreviewSliderSettings = () => ({
-    infinite: false,
-    arrows: false,
+    infinite: true,
+    arrows: true,
+    prevArrow: $('#preview_prev'),
+    nextArrow: $('#preview_next'),
     slidesToShow: 4,
     slidesToScroll: 4,
     mobileFirst: true,
@@ -97,10 +99,7 @@
       {
         breakpoint: 1198,
         settings: {
-          arrows: true,
           draggable: false,
-          prevArrow: $('#preview_prev'),
-          nextArrow: $('#preview_next'),
           infinite: true,
           vertical: true
         }

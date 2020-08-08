@@ -1,13 +1,13 @@
 .modal-cart {
   position: fixed;
-  top: 59px;
+  top: 60px;
   right: 0;
   display: none;
   flex-direction: column;
   width: 100%;
   padding: 30px;
   background-color: $white;
-  height: calc(var(--document-height) - 59px);
+  height: calc(var(--document-height) - 60px);
   overflow-y: auto;
   z-index: 50;
 }
@@ -178,6 +178,7 @@
 
 .modal-cart__empty strong {
   display: block;
+  margin-bottom: 5px;
 }
 
 .modal-cart__empty a {

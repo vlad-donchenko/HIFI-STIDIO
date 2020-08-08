@@ -7,7 +7,7 @@
   min-height: 17px;
   display: block;
   padding-left: 27px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.05em;
   color: $dark-blue;
@@ -16,7 +16,7 @@
     content: " ";
     position: absolute;
     left: 0;
-    top: 0;
+    top: -1px;
     width: 18px;
     height: 18px;
     background-color: $white;
@@ -30,7 +30,7 @@
     content: " ";
     position: absolute;
     left: 4px;
-    top: 4px;
+    top: 3px;
     width: 10px;
     height: 10px;
     border-radius: 3px;
@@ -59,9 +59,8 @@
 
 
 .checkbox--brown-text .checkbox__label {
-  padding-top: 3px;
   color: $brown;
   font-weight: 500;
-  font-size: 8px;
-  line-height: 10px;
+  font-size: 10px;
+  line-height: 14px;
 }

@@ -36,10 +36,9 @@
 }
 
 .site-footer__copyright {
-  margin: 0 0 0 auto;
   width: 100%;
-  max-width: 100px;
-  flex-basis: 100px;
+  max-width: 100%;
+  flex-basis: 100%;
   font-size: 10px;
   line-height: 1.5;
   letter-spacing: 0.05em;
@@ -77,6 +76,27 @@
     margin-top: 0;
     margin-left: auto;
   }
+
+  .site-footer__bottom-inner {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .site-footer__payment {
+    margin-bottom: 0;
+    max-width: 147px;
+    width: 100%;
+    flex-basis: 147px;
+  }
+
+  .site-footer__copyright {
+    max-width: 250px;
+    flex-basis: 250px;
+    width: 100%;
+    text-align: right;
+  }
 }
 
 @media (min-width: 768px) {
@@ -89,7 +109,6 @@
   }
 
   .site-footer__payment {
-    margin-left: 27px;
     max-width: 145px;
     flex-basis: 145px;
     margin-bottom: 0;
@@ -147,6 +166,5 @@
   .site-footer__payment {
     max-width: 190px;
     flex-basis: 190px;
-    margin-left: 169px;
   }
 }

@@ -59,6 +59,8 @@
 
 .favorites__delete-icon {
   position: absolute;
+  width: 15px;
+  height: 15px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -99,7 +101,7 @@
 }
 
 .favorites__info {
-  max-width: 115px;
+  max-width: 105px;
 }
 
 .favorites__buy {
@@ -164,11 +166,11 @@
   }
 
   .favorites__delete {
-    top: 24px;
+    top: 17px;
     left: initial;
     right: 0;
-    width: 14px;
-    height: 14px;
+    width: 25px;
+    height: 25px;
     border-radius: 4px;
     background-color: $brown;
 

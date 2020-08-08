@@ -29,7 +29,7 @@
   &::before {
     content: " ";
     position: absolute;
-    top: 12px;
+    top: 15px;
     right: 7px;
     display: block;
     width: 6px;
@@ -43,10 +43,20 @@
   padding: 12px 0;
   display: block;
   font-weight: 500;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1;
   text-decoration: none;
   color: $dark-blue;
+
+  @include transition(all);
+
+  &[href]:hover {
+    opacity: 0.6;
+  }
+
+  &[href]:focus {
+    opacity: 0.6;
+  }
 }
 
 .breadcrumb__item--active .breadcrumb__link {

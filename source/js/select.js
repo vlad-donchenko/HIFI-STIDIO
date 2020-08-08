@@ -5,26 +5,26 @@
   const selectCountry = $('#shipping_country');
   const selectGrayAppearance = $('.select--gray select');
 
-
-  const getSelectSetting = () => ({
-    minimumResultsForSearch: -2
+  const getSortSelectSetting = () => ({
+    minimumResultsForSearch: -2,
+    width: '100%',
   });
 
   const getProductSelectSetting = () => ({
-    ...getSelectSetting(),
+    minimumResultsForSearch: -2,
     width: '100%',
     dropdownCssClass: 'select2-dropdown--gray',
     placeholder: 'Choose An Option'
   });
 
   const getSelectCountrySetting = () => ({
-    ...getSelectSetting(),
+    minimumResultsForSearch: -2,
     width: '100%',
     dropdownCssClass: 'select2-dropdown--transparent',
     placeholder: 'Country*'
   });
 
-  sortSelect.select2(getSelectSetting());
+  sortSelect.select2(getSortSelectSetting());
   selectGrayAppearance.select2(getProductSelectSetting());
   selectCountry.select2(getSelectCountrySetting())
 })();

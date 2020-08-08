@@ -12,7 +12,7 @@
   margin-top: 0;
   margin-bottom: 40px;
   font-weight: 700;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1;
   letter-spacing: 0.05em;
   color: $dark-blue;
@@ -25,7 +25,7 @@
   padding: 29px 0;
   width: 100%;
   font-weight: 700;
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 0.05em;
   line-height: 1;
   background-color: transparent;
@@ -41,18 +41,29 @@
   display: block;
   padding-left: 10px;
 
-  &:after {
-    content: "+";
+  &::before,
+  &::after {
+    content: " ";
     position: absolute;
+    top: 50%;
+    left: -4px;
+    width: 10px;
+    height: 2px;
+    background-color: $brown;
+    transform: translateY(-50%);
+
+    @include transition(all);
+  }
+
+  &::after {
     left: 0;
-    top: 0;
-    font-weight: 700;
-    color: $brown;
+    height: 10px;
+    width: 2px;
   }
 }
 
 .filter__toggle--open .filter__toggle-content::after {
-  content: "-";
+  opacity: 0;
 }
 
 .filter__title {
@@ -89,7 +100,7 @@
 }
 
 .filter__item--dropdown .filter__link {
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 .filter__item-toggle {
@@ -105,12 +116,23 @@
   border: none;
   background-color: transparent;
 
+  &::before,
   &::after {
-    content: "+";
+    content: " ";
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 10px;
+    height: 2px;
+    background-color: $brown;
     transform: translate(-50%, -50%);
+
+    @include transition(all);
+  }
+
+  &::after {
+    height: 10px;
+    width: 2px;
   }
 }
 
@@ -132,7 +154,7 @@
 
 .filter__item--open .filter__item-toggle {
   &::after {
-    content: "-";
+    opacity: 0;
   }
 }
 
@@ -148,10 +170,12 @@
 
   &::before {
     content: "-";
+    font-weight: 400;
+    color: $dark-blue;
   }
 
-  &:hover,
-  &:focus {
+  &[href]:hover,
+  &[href]:focus {
     opacity: 0.6;
   }
 }
@@ -195,10 +219,7 @@
 
 .filter__dropdown-item.active .filter__dropdown-link {
   font-weight: 700;
-
-  &::before {
-    color: $brown;
-  }
+  color: $brown;
 }
 
 .filter__categories {
