@@ -43,7 +43,7 @@
 
 .menu-footer__link {
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.05em;
   color: $brown;
@@ -58,7 +58,7 @@
 }
 
 .menu-footer__item {
-  margin-bottom: 9px;
+  margin-bottom: 14px;
 
   &:last-child {
     margin-bottom: 0;
@@ -126,6 +126,6 @@
 @media (min-width: 1199px) {
   .menu-footer {
     grid-template-columns: repeat(4, auto);
-    grid-gap: 124px;
+    grid-gap: 100px;
   }
 }

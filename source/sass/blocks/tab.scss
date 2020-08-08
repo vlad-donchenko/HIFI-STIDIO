@@ -41,7 +41,7 @@
   font-weight: 500;
   color: $dark-blue;
   line-height: 1.2;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 0.05em;
 
   @include transition(all);
@@ -69,6 +69,6 @@
 
 @media (min-width: 374px) {
   .tab__menu-item {
-    margin-right: 49px;
+    margin-right: 39px;
   }
 }
