@@ -1,101 +1,58 @@
-.testimonial__text-wrap {
-  margin: 0;
-  padding: 19px 17px 31px 17px;
-  background-image: url("../img/testimonial/frame.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 73px;
-}
-
-.testimonial__arrows {
-  margin-top: 13px;
-}
-
 .testimonial__list {
+  margin-top: 35px;
   margin-left: -15px;
   margin-right: -15px;
 }
 
-.testimonial__text {
-  margin: 0;
-  height: 22px;
-  font-size: 8px;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  line-height: 1.7;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 .testimonial__slider-item {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-}
-
-.testimonial__slider-slide {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.testimonial__slider {
-  margin-top: 41px;
+.testimonial__text-wrap {
+  padding: 15px 20px;
+  background-color: $gray;
+  border-radius: 11px;
+}
+
+.testimonial__author-img {
+  border-radius: 50%;
 }
 
 .testimonial__author {
   display: flex;
-  align-items: flex-start;
-  padding: 0 21px 0 21px;
-}
-
-.testimonial__author-img {
-  max-width: 33px;
+  align-items: center;
 }
 
 .testimonial__author-info {
-  padding-left: 9px;
-  flex-basis: calc(100% - 32px);
-  width: calc(100% - 32px);
+  padding-left: 14px;
+  width: calc(100% - 50px);
 }
 
 .testimonial__author-name {
-  margin: 4px 0 5px 0;
+  margin: 0 0 7px 0;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 10px;
+  letter-spacing: 0.06em;
   color: $dark-blue;
 }
 
 .testimonial__author-theme {
   margin: 0;
-  font-size: 8px;
   font-weight: 500;
-  color: $brown;
+  font-size: 12px;
   letter-spacing: 0.06em;
+  color: $brown;
+}
+
+.testimonial__text p {
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  color: $dark-blue;
 }
 
 .testimonial__arrows {
+  margin-top: 10px;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-@media(min-width: 768px) {
-  .testimonial__list {
-    margin-left: -39px;
-    margin-right: -39px;
-  }
-
-  .testimonial__slider {
-    margin-top: 37px;
-  }
-}
-
-@media (min-width: 1199px) {
-  .testimonial__arrows {
-    margin-top: 14px;
-  }
-
-  .testimonial__list {
-    margin-left: -15px;
-    margin-right: -15px;
-  }
 }

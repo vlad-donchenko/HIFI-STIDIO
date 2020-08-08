@@ -19,13 +19,13 @@
   });
 
   const getTestimonialSliderSettings = () => ({
-    infinite: false,
+    infinite: true,
     dots: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
     focusOnSelect: true,
-    centerPadding: '12%',
+    centerPadding: '50px',
     prevArrow: $('#testimonial_prev'),
     nextArrow: $('#testimonial_next'),
     mobileFirst: true,
@@ -35,8 +35,18 @@
         breakpoint: 599,
         settings: {
           infinite: true,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          centerMode: false,
+          focusOnSelect: false,
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          infinite: true,
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           centerMode: false,
           focusOnSelect: false,
         }
