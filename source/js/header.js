@@ -11,14 +11,6 @@
     TABLET: 1198,
   };
 
-  const ActiveClass = {
-    USER_OPTION_OPEN: 'user-option--open',
-    NAV_OPEN_SEARCH: 'nav--open-search',
-    NAV_OPEN: 'nav--open',
-    BURGER_CLOSE: 'burger--close',
-    OVERFLOW_HIDDEN: 'overflow-hidden'
-  };
-
   const applyViewPort = () => {
     const doc = document.documentElement;
     doc.style.setProperty('--document-height', `${window.innerHeight}px`);
@@ -45,16 +37,16 @@
     const menuButton = siteHeader.querySelector('.burger');
 
     const closeMenu = () => {
-      if (menuButton.classList.contains(ActiveClass.BURGER_CLOSE) && nav.classList.contains(ActiveClass.NAV_OPEN)) {
-        menuButton.classList.remove(ActiveClass.BURGER_CLOSE);
-        nav.classList.remove(ActiveClass.NAV_OPEN);
+      if (menuButton.classList.contains('burger--close') && nav.classList.contains('nav--open')) {
+        menuButton.classList.remove('burger--close');
+        nav.classList.remove('nav--open');
         root.classList.remove('show-main-menu');
       }
     };
 
     const toggleShowMenuClickHandler = () => {
-      menuButton.classList.toggle(ActiveClass.BURGER_CLOSE);
-      nav.classList.toggle(ActiveClass.NAV_OPEN);
+      menuButton.classList.toggle('burger--close');
+      nav.classList.toggle('nav--open');
       root.classList.toggle('show-main-menu');
     };
 
@@ -71,13 +63,12 @@
     });
 
     /*-- User Option List --*/
-
     const userOption = siteHeader.querySelector('.user-option');
     const userOptionToggle = userOption.querySelector('.user-option__link-main');
 
     const closeUserOptionLIstOutsideClick = (evt) => {
       if (!userOption.contains(evt.target)) {
-        userOption.classList.remove(ActiveClass.USER_OPTION_OPEN);
+        userOption.classList.remove('user-option--open');
 
         document.removeEventListener('keydown', closeUserOptionListKeyPres);
         document.removeEventListener('click', closeUserOptionLIstOutsideClick);
@@ -88,7 +79,7 @@
       const isEsc = evt.key === ESCAPE;
 
       if (isEsc) {
-        userOption.classList.remove(ActiveClass.USER_OPTION_OPEN);
+        userOption.classList.remove('user-option--open');
 
         document.removeEventListener('keydown', closeUserOptionListKeyPres);
         document.removeEventListener('click', closeUserOptionLIstOutsideClick);
@@ -98,7 +89,7 @@
     const toggleShowUserOptionListClickHandle = (evt) => {
       evt.preventDefault();
 
-      userOption.classList.toggle(ActiveClass.USER_OPTION_OPEN);
+      userOption.classList.toggle('user-option--open');
 
       closeMenu();
 
@@ -107,8 +98,6 @@
     };
 
     userOptionToggle.addEventListener('click', toggleShowUserOptionListClickHandle);
-
-    /*-- Search --*/
 
     /*-- Menu --*/
     const menuItemWithDropdownElements = [...nav.querySelectorAll('.main-menu__item--drop')];
@@ -178,8 +167,8 @@
       } else if (currentDocumentWidth < BreakPoint.MOBILE) {
         getMobileMenuBehavior();
       } else if (currentDocumentWidth > BreakPoint.TABLET) {
-        menuButton.classList.remove(ActiveClass.BURGER_CLOSE);
-        nav.classList.remove(ActiveClass.NAV_OPEN);
+        menuButton.classList.remove('burger--close');
+        nav.classList.remove('nav--open');
         root.classList.remove('show-main-menu');
         removeMainMenuToggleElements();
       }
@@ -193,7 +182,6 @@
     });
 
     /*-- Cart --*/
-
     const openCartButton = document.querySelector('.user-info__link--cart');
     const modalCart = document.querySelector('.modal-cart');
     const closeCartButton = modalCart.querySelector('.modal-cart__close');
