@@ -1,8 +1,8 @@
 .button {
-  padding: 15px 13px 14px 13px;
+  padding: 13px 13px 15px 13px;
   display: inline-block;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.2;
   color: $gray;
   background-color: $dark-blue;
@@ -29,18 +29,10 @@
 }
 
 .button--small {
-  padding: 8px;
-  font-size: 10px;
+  padding: 11.5px 12px;
   border-radius: 9px;
 }
 
 .button--medium {
   padding: 11.5px;
-}
-
-@media (min-width: 1198px) {
-  .button--small {
-    padding: 15px 12px 10px 12px;
-    border-radius: 9px;
-  }
 }

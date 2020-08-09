@@ -8,13 +8,30 @@
   top: 0;
   right: -14px;
   height: 15px;
-  width: 30px;
+  width: 40px;
   background-color: transparent;
   border: none;
 
+  &::before,
   &::after {
-    content: "+";
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 2px;
+    font-weight: 500;
+    background-color: $dark-blue;
+    transform: translate(-50%, -50%);
+
+    @include transition(all);
   }
+
+  &::after {
+    height: 10px;
+    width: 2px;
+  }
+
   &:focus {
     outline: none;
   }
@@ -25,7 +42,7 @@
 }
 
 .menu-footer__column--open .menu-footer__toggle:after {
-  content: "-";
+  opacity: 0;
 }
 
 .menu-footer__column--open .menu-footer__list {

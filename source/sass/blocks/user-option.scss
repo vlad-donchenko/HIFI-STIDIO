@@ -32,6 +32,8 @@
 
 .user-option--open .user-option__list {
   display: block;
+
+  @include animation(fadeIn);
 }
 
 .user-option--open .user-option__link-main::after {
@@ -58,6 +60,16 @@
   line-height: 1;
   color: $dark-blue;
   text-decoration: none;
+
+  @include transition(all);
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
 }
 
 .user-option__icon {
@@ -88,7 +100,7 @@
   }
 
   .user-option__link {
-    max-width: 86px;
+    max-width: 105px;
     width: 100%;
     display: flex;
     align-items: center;

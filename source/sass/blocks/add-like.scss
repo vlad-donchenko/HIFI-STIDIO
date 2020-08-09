@@ -6,11 +6,11 @@
   @include transition(all);
 
   &:hover {
-    transform: scale(1.2);
+    opacity: 0.6;
   }
 
   &:focus {
-    transform: scale(1.2);
+    opacity: 0.6;
     outline: none;
   }
 }

@@ -45,28 +45,30 @@
   width: 10px;
   height: 10px;
 
-  &::before {
-    content: "+";
+  &::before,
+  &::after {
+    content: " ";
     position: absolute;
     top: 50%;
     left: 50%;
-    color: $brown;
+    width: 10px;
+    height: 2px;
+    font-weight: 500;
+    background-color: $brown;
     transform: translate(-50%, -50%);
+
+    @include transition(all);
+  }
+
+  &::after {
+    height: 10px;
+    width: 2px;
   }
 }
 
 .toggle-content--open .toggle-content__toggle-icon {
-  &::before {
-    display: none;
-  }
-
   &::after {
-    content: "-";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: $brown;
-    transform: translate(-50%, -50%);
+    display: none;
   }
 }
 

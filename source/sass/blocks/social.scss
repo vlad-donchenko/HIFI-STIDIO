@@ -15,11 +15,11 @@
   display: block;
   line-height: 0;
 
-  @include transition(transform);
+  @include transition(all);
 
   &:hover,
   &:focus {
-    transform: scale(1.5);
+    opacity: 0.6;
   }
 }
 

@@ -1,13 +1,13 @@
 .modal-cart {
   position: fixed;
-  top: 60px;
+  top: 59px;
   right: 0;
   display: none;
   flex-direction: column;
   width: 100%;
   padding: 30px;
   background-color: $white;
-  height: calc(var(--document-height) - 60px);
+  height: calc(var(--document-height) - 59px);
   overflow-y: auto;
   z-index: 50;
 }
@@ -239,5 +239,12 @@
   .modal-cart__footer {
     max-width: 285px;
     width: 100%;
+  }
+}
+
+@media (min-width: 1199px) {
+  .modal-cart {
+    top: 60px;
+    height: calc(var(--document-height) - 60px);
   }
 }
