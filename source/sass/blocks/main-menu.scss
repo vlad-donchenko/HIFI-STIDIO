@@ -21,6 +21,16 @@
   font-size: 14px;
   line-height: 1;
   color: $dark-blue;
+
+  &:hover {
+    font-weight: 700;
+    letter-spacing: 0.025em;
+  }
+
+  &:focus {
+    font-weight: 700;
+    letter-spacing: 0.025em;
+  }
 }
 
 .main-menu__submenu {
@@ -234,34 +244,48 @@
 
   .main-menu__item--drop:hover .main-menu__submenu {
     display: grid;
+
+    @include animation(fadeIn);
   }
 
   .main-menu__item--drop:hover .main-menu__link {
     font-weight: 700;
+    letter-spacing: 0.025em;
   }
 
   .main-menu__item--drop:hover .main-menu__link::after {
     display: block;
+
+    @include animation(fadeIn);
   }
 
   .main-menu__item--drop:hover .main-menu__link::before {
     display: block;
+
+    @include animation(fadeIn);
   }
 
   .main-menu__item--drop:focus-within .main-menu__submenu {
     display: grid;
+
+    @include animation(fadeIn);
   }
 
   .main-menu__item--drop:focus-within .main-menu__link::after {
     display: block;
+
+    @include animation(fadeIn);
   }
 
   .main-menu__item--drop:focus-within .main-menu__link::before {
     display: block;
+
+    @include animation(fadeIn);
   }
 
   .main-menu__item--drop:focus-within .main-menu__link {
     font-weight: 700;
+    letter-spacing: .025em;
   }
 
   .main-menu__submenu {
