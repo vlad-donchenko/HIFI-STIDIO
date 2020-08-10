@@ -10,6 +10,12 @@
   z-index: 70;
 }
 
+.search-modal__nothing-find {
+  margin: 50px 0;
+  font-size: 18px;
+  text-align: center;
+}
+
 .search-modal .container {
   flex-grow: 1;
   display: flex;
