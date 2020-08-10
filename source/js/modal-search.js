@@ -199,7 +199,7 @@
 
     return () => {
       const parameters = arguments;
-      console.log(parameters);
+
       if (lastTimeout) {
         window.clearTimeout(lastTimeout);
       }
