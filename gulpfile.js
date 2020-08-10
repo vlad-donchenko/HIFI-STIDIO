@@ -109,7 +109,7 @@ gulp.task("js-min", function () {
     "source/js/tab.js",
     "source/js/accordion.js",
     "source/js/select.js",
-    "source/js/drag-and-drop-loader.js",
+    "source/js/file-chooser.js",
     "source/js/modal-search.js",
     "source/js/index.js"
   ])
