@@ -280,18 +280,20 @@
     const brandSearchResultWrapper = document.querySelector('#brand_search_result');
     const brandSearchInput = document.querySelector('#brand_search');
 
-    const searchResultInputHandler = () => {
-      const value = brandSearchInput.value;
+    if (brandSearchResultWrapper) {
+      const searchResultInputHandler = () => {
+        const value = brandSearchInput.value;
 
-      const searchList = BRANDS.filter((item) => {
-        return item.title.indexOf(value) !== -1;
-      });
+        const searchList = BRANDS.filter((item) => {
+          return item.title.indexOf(value) !== -1;
+        });
 
-      const searchResultTemplate = getSearchResultTemplate(searchList);
-      brandSearchResultWrapper.innerHTML = '';
-      brandSearchResultWrapper.insertAdjacentHTML('afterbegin', searchResultTemplate);
-    };
+        const searchResultTemplate = getSearchResultTemplate(searchList);
+        brandSearchResultWrapper.innerHTML = '';
+        brandSearchResultWrapper.insertAdjacentHTML('afterbegin', searchResultTemplate);
+      };
 
-    brandSearchInput.addEventListener('input', debounce(searchResultInputHandler));
+      brandSearchInput.addEventListener('input', debounce(searchResultInputHandler));
+    }
   }
 })();

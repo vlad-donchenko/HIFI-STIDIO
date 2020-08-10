@@ -11,6 +11,14 @@
   border: 1px dashed rgba($dark-blue, 0.5);
   border-radius: 10px;
   cursor: pointer;
+
+  &:hover {
+    border-width: 2px;
+  }
+}
+
+.file-chooser__input:focus + .file-chooser__label {
+  border-width: 2px;
 }
 
 .file-chooser__label-limit {
@@ -27,6 +35,8 @@
 
 .file-chooser__list {
   margin-top: 30px;
+  display: grid;
+  grid-gap: 20px;
 }
 
 .file-chooser__item {
@@ -134,5 +144,9 @@
     height: 14px;
     padding: 0;
     margin-left: 16px;
+  }
+
+  .file-chooser__list {
+    grid-template-columns: 1fr 1fr;
   }
 }
