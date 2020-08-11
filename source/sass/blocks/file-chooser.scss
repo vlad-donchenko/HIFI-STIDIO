@@ -105,7 +105,7 @@
 
 .file-chooser__info {
   padding-left: 16px;
-  padding-right: 35px;
+  padding-right: 0;
   width: calc(100% - 22px);
 }
 
@@ -133,8 +133,8 @@
 
   .file-chooser__info {
     padding-left: 16px;
-    padding-right: 16px;
-    width: 193px;
+    padding-right: 0;
+    width: calc(100% - 22px);
   }
 
   .file-chooser__delete-file {

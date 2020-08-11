@@ -45,7 +45,6 @@
       };
 
       fileChooserInput.addEventListener('change', () => {
-        console.log(fileChooserInput.files);
         const files = [...fileChooserInput.files];
         const downloadFilesContainerTemplate = getDownloadFilesContainerTemplate(files);
         fileChooserListRoot.innerHTML = '';

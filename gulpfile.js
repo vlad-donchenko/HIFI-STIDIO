@@ -114,7 +114,7 @@ gulp.task("js-min", function () {
     "source/js/index.js"
   ])
     .pipe(concat("scripts.min.js"))
-    //.pipe(jsmin())
+    .pipe(jsmin())
     .pipe(gulp.dest("build/js"))
     .pipe(server.stream());
 });
